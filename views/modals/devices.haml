@@ -1,0 +1,272 @@
+#devicesModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+        %h2#myModalLabel.modal-title Sériovo vyrábané zdravotnícke pomôcky
+      .modal-body
+        .devices
+
+          .group-list-header
+            Skupiny
+          .group-list
+
+            .tabbable.tabs-left
+              %ul.nav.nav-tabs.nav-global
+                %li.active
+                  %a{"data-toggle" => "tab", :href => "#aa"} A
+                %li
+                  %a{"data-toggle" => "tab", :href => "#bb"} B
+                %li
+                  %a{"data-toggle" => "tab", :href => "#dd"} D
+                %li
+                  %a{"data-toggle" => "tab", :href => "#ff"} F
+                %li
+                  %a{"data-toggle" => "tab", :href => "#gg"} G
+                %li
+                  %a{"data-toggle" => "tab", :href => "#hh"} H
+                %li
+                  %a{"data-toggle" => "tab", :href => "#jj"} J
+                %li
+                  %a{"data-toggle" => "tab", :href => "#kk"} K
+                %li
+                  %a{"data-toggle" => "tab", :href => "#ll"} L
+                %li
+                  %a{"data-toggle" => "tab", :href => "#nn"} N
+                %li
+                  %a{"data-toggle" => "tab", :href => "#oo"} O
+
+              .tab-content
+
+                #aa.tab-pane.fade.city.in.active
+                  .body
+                    .text
+                      %h3
+                        %b Skupina A
+                      %ul.list
+                        %li
+                          Obväzový materiál, náplasti a zdravotnícke pomôcky, ktoré slúžia na aplikáciu liečiva
+
+                      %images
+                        %a.example-aa-1{"data-lightbox" => "example-aa-1", "data-title" => "", :href => "images/devices/a.jpg"}
+                          %img.img-thumbnail{:src=>"images/devices/a_s.png"}
+                        %a.example-aa-2{"data-lightbox" => "example-aa-1", "data-title" => "", :href => "images/devices/a2.jpg"}
+                          %img.img-thumbnail{:src=>"images/devices/a2_s.png"}
+
+                #bb.tab-pane.fade
+                  .body
+                    .text
+                      %h3
+                        %b Skupina B
+                      %ul.list
+                        %li
+                          Zdravotnícke pomôcky pre inkontinenciu, retenciu moču
+                        %li
+                          Objednávame na základe požiadavky pacientov
+
+                      %images
+                        %a.example-bb-1{"data-lightbox" => "example-bb-1", "data-title" => "", :href => "images/devices/b.jpg"}
+                          %img.img-thumbnail{:src=>"images/devices/b_s.png"}
+                        %a.example-bb-2{"data-lightbox" => "example-bb-1", "data-title" => "", :href => "images/devices/b2.jpg"}
+                          %img.img-thumbnail{:src=>"images/devices/b2_s.png"}
+
+                #dd.tab-pane.fade
+                  .body
+                    .text
+                      %h3
+                        %b Skupina D
+                      %ul.list
+                        %li
+                          Zdravotnícke pomôcky pre diabetikov
+                        %li
+                          Objednávame na základe požiadavky pacientov
+
+                      %images
+                        %a.example-dd-1{"data-lightbox" => "example-dd-1", "data-title" => "", :href => "images/devices/d.jpg"}
+                          %img.img-thumbnail{:src=>"images/devices/d_s.png"}
+                        %a.example-dd-2{"data-lightbox" => "example-dd-1", "data-title" => "", :href => "images/devices/d2.jpg"}
+                          %img.img-thumbnail{:src=>"images/devices/d2_s.png"}
+
+                #ff.tab-pane.fade
+                  .body
+                    .text
+                      %h3
+                        %b Skupina F
+                      %ul.list
+                        %li
+                          Zdravotnícke pomôcky pre stomikov
+
+                      %images
+                        %a.example-ff-1{"data-lightbox" => "example-ff-1", "data-title" => "", :href => "images/devices/f.jpg"}
+                          %img.img-thumbnail{:src=>"images/devices/f_s.png"}
+                        %a.example-ff-2{"data-lightbox" => "example-ff-1", "data-title" => "", :href => "images/devices/f2.jpg"}
+                          %img.img-thumbnail{:src=>"images/devices/f2_s.png"}
+
+
+                #gg.tab-pane.fade
+                  .body
+                    .text
+                      %h3
+                        %b Skupina G
+                      %ul.list
+                        %li
+                          Zdravotnícke pančuchy, pančuchové nohavice, návleky a iné pomôcky pre kompresívnu liečbu
+
+                      %images
+                        %a.example-gg-1{"data-lightbox" => "example-gg-1", "data-title" => "", :href => "images/devices/g.jpg"}
+                          %img.img-thumbnail{:src=>"images/devices/g_s.png"}
+                        %a.example-gg-2{"data-lightbox" => "example-gg-1", "data-title" => "", :href => "images/devices/g2.jpg"}
+                          %img.img-thumbnail{:src=>"images/devices/g2_s.png"}
+
+                #hh.tab-pane.fade
+                  .body
+                    .text
+                      %h3
+                        %b Skupina H
+                      %ul.list
+                        %li
+                          Sériovo vyrábané prsné epitézy
+                        %li
+                          Len na vyžiadanie pacienta.
+
+                      %images
+                        %a.example-hh-1{"data-lightbox" => "example-hh-1", "data-title" => "", :href => "images/devices/h.jpg"}
+                          %img.img-thumbnail{:src=>"images/devices/h_s.png"}
+
+
+
+                #jj.tab-pane.fade
+                  .body
+                    .text
+                      %h3
+                        %b Skupina J
+                      %ul.list
+                        %li
+                          Hromadne vyrábané ortopedicko-protetické pomôcky a príslušenstvo k ním
+                        %li
+                          Napr. ortézy dolných a horných končatín, ortézy trupu, látky invazívne aplikované – pri poškodení kostnej chrupavky
+
+                      %images
+                        .row-1
+                          %a.example-jj-1{"data-lightbox" => "example-jj-1", "data-title" => "", :href => "images/devices/j.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/j_s.png"}
+                          %a.example-jj-2{"data-lightbox" => "example-jj-1", "data-title" => "", :href => "images/devices/j2.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/j2_s.png"}
+                          %a.example-jj-3{"data-lightbox" => "example-jj-1", "data-title" => "", :href => "images/devices/j3.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/j3_s.png"}
+                        .row-2
+                          %a.example-jj-4{"data-lightbox" => "example-jj-1", "data-title" => "", :href => "images/devices/j4.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/j4_s.png"}
+                          %a.example-jj-5{"data-lightbox" => "example-jj-1", "data-title" => "", :href => "images/devices/j5.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/j5_s.png"}
+
+
+                #kk.tab-pane.fade
+                  .body
+                    .text
+                      %h3
+                        %b Skupina K
+                      %ul.list
+                        %li
+                          Rehabilitačné a kompenzačné pomôcky
+                        %li
+                          Napr. palice, barle, madlá, pomôcky uľahčujúce osobnú hygienu
+
+                      %images
+                        .row-1
+                          %a.example-kk-1{"data-lightbox" => "example-kk-1", "data-title" => "", :href => "images/devices/k.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/k_s.png"}
+                          %a.example-kk-2{"data-lightbox" => "example-kk-1", "data-title" => "", :href => "images/devices/k2.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/k2_s.png"}
+                          %a.example-kk-3{"data-lightbox" => "example-kk-1", "data-title" => "", :href => "images/devices/k3.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/k3_s.png"}
+
+                        .row-2
+                          %a.example-kk-4{"data-lightbox" => "example-kk-1", "data-title" => "", :href => "images/devices/k4.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/k4_s.png"}
+                          %a.example-kk-5{"data-lightbox" => "example-kk-1", "data-title" => "", :href => "images/devices/k5.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/k5_s.png"}
+                          %a.example-kk-6{"data-lightbox" => "example-kk-1", "data-title" => "", :href => "images/devices/k6.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/k6_s.png"}
+
+                        .row-3
+                          %a.example-kk-7{"data-lightbox" => "example-kk-1", "data-title" => "", :href => "images/devices/k7.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/k7_s.png"}
+                          %a.example-kk-8{"data-lightbox" => "example-kk-1", "data-title" => "", :href => "images/devices/k8.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/k8_s.png"}
+                          %a.example-kk-9{"data-lightbox" => "example-kk-1", "data-title" => "", :href => "images/devices/k9.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/k9_s.png"}
+
+                        .row-4
+                          %a.example-kk-10{"data-lightbox" => "example-kk-1", "data-title" => "", :href => "images/devices/k11.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/k11_s.png"}
+                          %a.example-kk-11{"data-lightbox" => "example-kk-1", "data-title" => "", :href => "images/devices/k12.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/k12_s.png"}
+                          %a.example-kk-12{"data-lightbox" => "example-kk-1", "data-title" => "", :href => "images/devices/k13.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/k13_s.png"}
+
+                        .row-5
+                          %a.example-kk-14{"data-lightbox" => "example-kk-1", "data-title" => "", :href => "images/devices/k14.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/k14_s.png"}
+                          %a.example-kk-15{"data-lightbox" => "example-kk-1", "data-title" => "", :href => "images/devices/k16.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/k16_s.png"}
+                          %a.example-kk-16{"data-lightbox" => "example-kk-1", "data-title" => "", :href => "images/devices/k17.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/k17_s.png"}
+
+                        .row-6
+                          %a.example-kk-17{"data-lightbox" => "example-kk-1", "data-title" => "", :href => "images/devices/k18.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/k18_s.png"}
+
+
+
+                #ll.tab-pane.fade
+                  .body
+                    .text
+                      %h3
+                        %b Skupina L
+                      %ul.list
+                        %li
+                          Vozíky a kočíky, mobilné chodúľky, zdviháky chorých, špeciálne postele a príslušenstvo k ním
+                      %images
+                        .row-1
+                          %a.example-ll-1{"data-lightbox" => "example-ll-1", "data-title" => "", :href => "images/devices/l.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/l_s.png"}
+                          %a.example-ll-2{"data-lightbox" => "example-ll-1", "data-title" => "", :href => "images/devices/l2.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/l2_s.png"}
+                          %a.example-ll-3{"data-lightbox" => "example-ll-1", "data-title" => "", :href => "images/devices/k18.jpg"}
+                            %img.img-thumbnail{:src=>"images/devices/l3_s.png"}
+
+
+
+                #nn.tab-pane.fade
+                  .body
+                    .text
+                      %h3
+                        %b Skupina N
+                      %ul.list
+                        %li
+                          Pomôcky pre sluchovo postihnutých, načúvacie prístroje a príslušenstvo k ním
+                        %li
+                          Pomôcky objednávame na požiadanie pacienta, nie sú bežne dostupné na sklade
+                      %images
+                        %a.example-nn-1{"data-lightbox" => "example-nn-1", "data-title" => "", :href => "images/devices/n.jpg"}
+                          %img.img-thumbnail{:src=>"images/devices/n_s.png"}
+
+                #oo.tab-pane.fade
+                  .body
+                    .text
+                      %h3
+                        %b Skupina O
+                      %ul.list
+                        %li
+                          Pomôcky pre zrakovo postihnutých a príslušenstvo k ním
+                        %li
+                          Pomôcky objednávame na požiadanie pacienta, nie sú bežne dostupné na sklade
+                      %images
+                        %a.example-oo-1{"data-lightbox" => "example-oo-1", "data-title" => "", :href => "images/devices/o.jpg"}
+                          %img.img-thumbnail{:src=>"images/devices/o_s.png"}
+
+
+
+      .modal-footer
+        %button.btn.btn-lg.btn-close{"data-dismiss" => "modal", :type => "button"} Zavrieť

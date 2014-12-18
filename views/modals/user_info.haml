@@ -1,0 +1,118 @@
+#userInfoModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+        %h2#myModalLabel.modal-title Informácie pre klientov
+      .modal-body
+
+
+
+        %ul.nav.nav-pills.client-info
+          %li.first.active
+            %a{"data-toggle" => "pill", :href => "#drugs"} Produkty pre liečenie ortopedických onemocnení
+          %li.second
+            %a{"data-toggle" => "pill", :href => "#insurance"} Taxi služby
+
+        %hr.blue
+
+        .tab-content
+
+          #drugs.tab-pane.fade.in.active
+            = haml :"modals/partials/drugs"
+
+          #insurance.tab-pane.fade
+            .container
+              .row
+                .col-md-5.col-md-offset-1
+                  .column1
+
+                    .bs-callout.bs-callout-info
+                      .text
+                        %h3
+                          %b k2taxi
+                      %ul.number-list
+                        %li
+                          0907 06 22 77
+                        %li
+                          0903 45 48 20
+                      %br
+
+                .col-md-5
+                  .column2
+                    .bs-callout.bs-callout-info
+                      .text
+                        %h3
+                          %b GP-Taxi
+                      %ul.number-list
+                        %li
+                          0910 944 751
+                        %li
+                          0944 012 090
+
+                      %br
+
+              .row
+                .col-md-5.col-md-offset-1
+                  .column1
+                    .bs-callout.bs-callout-info
+                      .text
+                        %h3
+                          %b MB Taxi
+                      %ul.number-list
+                        %li
+                          0908 248 200
+                        %li
+                          0903 825 646
+                      %br
+
+                .col-md-5
+                  .column2
+                    .bs-callout.bs-callout-info
+                      .text
+                        %h3
+                          %b Alpha
+                      %ul.number-list
+                        %li
+                          0902 345 600
+                        %li
+                          0908 042 082
+                      %br
+
+              .row
+                .col-md-5.col-md-offset-1
+                  .column1
+                    .bs-callout.bs-callout-info
+                      .text
+                        %h3
+                          %b EUROPE Taxi
+                      %ul.number-list
+                        %li
+                          0902 366 377
+                        %li
+                          0908 559 903
+
+                      %br
+
+                .col-md-5
+                  .column2
+                    .bs-callout.bs-callout-info
+                      .text
+                        %h3
+                          %b MS Taxi
+                      %ul.number-list
+                        %li
+                          0902 108 108
+                        %li
+                          0908 108 108
+                      %br
+
+
+
+
+
+
+
+      .modal-footer
+        %button.btn.btn-lg.btn-close{"data-dismiss" => "modal", :type => "button"} Zavrieť
+

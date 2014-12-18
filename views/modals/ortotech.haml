@@ -1,0 +1,135 @@
+#ortotechModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+        %h2#myModalLabel.modal-title ARTRO-Pro
+      .modal-body
+        %ul.nav.nav-pills.ortotech
+          %li.about.active
+            %a{"data-toggle" => "pill", :href => "#about"} O nás
+          %li.videos
+            %a{"data-toggle" => "pill", :href => "#videos"} Edumed
+          %li.contacts
+            %a{"data-toggle" => "pill", :href => "#contacts"} Kontakty
+
+        %hr.blue
+
+        .tab-content
+          #about.tab-pane.fade.in.active
+            %center
+              %h2 O nás
+            %hr.blue
+            .container.about
+              .row
+                .col-md-10.col-md-offset-1
+                  %p Vitajte v spoločnosti ARTRO-Pro. ArtroPro je neštátne zdravotnícke zariadenie zamerané na diagnostiku a liečbu ochorení a úrazov pohybového aparátu. ArtroPro má dve ortopedické ambulancie a operačnú sálu s potrebným zázemím na poskytovanie jednodňovej chirurgie. 
+
+                  %center
+                    %a.about-1{"data-lightbox" => "about-1", "data-title" => "", :href => "images/about/3.jpg"}
+                      %img.img-thumbnail{:src=>"images/about/3s.jpg"}
+                    %a.about-2{"data-lightbox" => "about-1", "data-title" => "", :href => "images/about/4.jpg"}
+                      %img.img-thumbnail{:src=>"images/about/4s.jpg"}
+                  %p Jedna ortopedická ambulancia je umiestnená v priestoroch na adrese Čsl. armády 10B, v Martine. Odborným garantom tejto ambulancie je MUDr. Štefan Petriščák, PhD. Ambulancia slúži k liečbe pacientov s ortopedickými ochoreniami a úrazmi pohybového aparátu s dôrazom na indikáciu k operačným zákrokom na pohybovom aparáte. Sú to úrazy u športovcov, vrcholových športovcov ale aj ľudí pri rekreačnom športovaní a pacientov s degeneratívnymi ochoreniami pohybového aparátu. Tieto operačné zákroky sa robia v rámci jednodňovej chirurgie na veľmi modernom operačnom sále, ktorý je súčasťou novovybudovaného objektu na ulici Čsl. armády 10B v Martine. Sú prevažne artroskopické.
+                  %center
+                    %a.about-3{"data-lightbox" => "about-2", "data-title" => "", :href => "images/about/7.jpg"}
+                      %img.img-thumbnail{:src=>"images/about/7s.jpg"}
+                    %a.about-4{"data-lightbox" => "about-2", "data-title" => "", :href => "images/about/8.jpg"}
+                      %img.img-thumbnail{:src=>"images/about/8s.jpg"}
+                  %p Druhá ortopedická ambulancia sa nachádza na adrese: Prieložtek 1, Martin. Odborným garantom tejto ambulancie je MUDr. Gražyna Gállová. V tejto ambulancii sú ošetrovaní pacienti s ortopedickými ochoreniami.
+
+          #videos.tab-pane.fade
+            %center
+              %h2 Občianske združenie EDUMED
+            %hr.blue
+            .container
+              .row
+                .col-md-10.col-md-offset-1
+                  .text
+                    %p EDUMED je občianske združenie s celoslovenskou pôsobnosťou, ktorého dlhodobým cieľom je skvalitňovať život ľudí so zdravotnými problémami, ktorí si vyžadujú lekársku starostlivosť.
+                    .bs-callout.bs-callout-info.quotes Občianske združenie EDUMED O. Z. začalo 4. mája 2010 s realizovaním projektu „Vzdelávanie personálu EDUMED v multiplikačných aktivitách pri evaluácii limitných situácií a pacientskej advokácii“ vďaka podpore z Európskeho sociálneho fondu v rámci Operačného programu Zamestnanosť a sociálna inklúzia.
+
+                    %p Realizovaný projekt je zameraný na zvýšenie vzdelanostnej úrovne stredného zdravotníckeho personálu (zdravotné sestry a ošetrovatelia) pracujúceho pre občianske združenie EDUMED O. Z. Vzdelávacie aktivity projektu „Vzdelávanie personálu EDUMED v multiplikačných aktivitách pri evaluácii limitných situácií a pacientskej advokácii“ budú pozostávať z piatich kurzov, každý z nich v trvaní troch dní na témy: Efektívna komunikácia a tímová spolupráca, Timemanažment, Stresmanažment, Pacientská advokácia, Intenzívne jazykové vzdelávanie a Praktický nácvik situácií pri práci s pacientmi. 
+                    %p Prostredníctvom vzdelávacích aktivít projektu občianskeho združenia EDUMED OZ, získa združenie 50 vyškolených pracovníkov, ktorí budú plne pripravení na výkon konkrétnych aktivít a cieľov . Občianske združenie EDUMED OZ tak prostredníctvom týchto vyškolených osôb dosiahne zvýšenie kvality služieb poskytovaných OZ posilnením jeho výkonných kapacít
+
+          #contacts.tab-pane.fade
+            %center
+              %h2 Organizačný prehľad pracovísk
+              %h2 ARTRO-Pro
+            %hr.blue
+            .container.contacts
+              .row
+                .col-md-10.col-md-offset-1
+                  .section
+                    .name.big Recepcia
+                    .phone 043/4729 711
+                  %hr.blue
+
+                  .section
+                    .name.big Ortopedické ambulancie
+                    %ul.list
+                      %li
+                        .name MUDr. Štefan Petriščák
+                        .phone  043/4297055, 0917 499 700
+                      %li
+                        .name MUDr. Gražyna Gállová
+                        .phone 043/4223020
+                  / %hr.blue
+
+                  / .section
+                  /   .name.big Rehabilitačná ambulancia
+                  /   %ul.list
+                  /     %li
+                  /       .name RHB + masér
+                  /       .phone 048/4729 715
+
+            %hr.blue
+            .row
+              .col-md-4.col-md-offset-4
+                %center
+                  %h2 Adresa
+            .row
+              .col-md-5.col-md-offset-1
+                %center.main-adress
+                  %h2.main FirmA ARTRO-Pro:
+                  %h3.name 
+                  %h3.street Československej armády 10 B
+                  %h3.city 036 01 Martin
+                  %hr.blue
+                  %h2 Ordinuje:
+                  %h3 MUDr. Štefan Petriščák, PhD.
+
+              .col-md-5
+                %center.main-adress
+                  %h2.main Ortopedická ambulancia:
+                  %h3.name 
+                  %h3.street Prieložtek 1
+                  %h3.city 036 01 Martin
+                  %hr.blue
+                  %h2 Ordinuje:
+                  %h3 MUDr. Gražyna Gállová
+
+
+
+            / .row
+            /   .col-md-6
+            /     %center.main-contacts
+            /       %h2.main Kontakt
+            /       %h3.phone Tel: 048/4729 711
+            /       %h3.fax Fax: 048/4729 797
+            /       %h3.mail Mail: ortotech@ortotech.sk
+
+            /   .col-md-6
+            /     %center.main-adress
+            /       %h2.main Adresa
+            /       %h3.name Ortotech, spol. s.r.o.
+            /       %h3.street Nám. L. Svobodu č.1
+            /       %h3.city 975 17 Banská Bystrica
+
+
+
+
+
+
+      .modal-footer
+        %button.btn.btn-lg.btn-close{"data-dismiss" => "modal", :type => "button"} Zavrieť

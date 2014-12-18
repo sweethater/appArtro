@@ -1,0 +1,77 @@
+#surveyModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+        %h2#myModalLabel.modal-title Anketa pre pacientov
+      .modal-body
+        .survey
+          %form#survey.form-horizontal{:role => "form", :action=>"/submit_feedback", "method"=>"post"}
+            .form-group
+              .col-sm-3
+              .col-sm-6
+                %center
+                  %label.control-label.question_title{:for => "doctor"} Ošetrujúci lekár(ka)
+                  %select.form-control{:name => "doctor"}
+                    %option{:value => 1} MUDr. Štefan Petriščák
+                    %option{:value => 2} MUDr. Gražyna Gállová
+                    / %option{:value => 3} MUDr. Konderová
+                    / %option{:value => 4} MUDr. Kubišová
+
+            .form-group
+              .col-sm-3
+              .col-sm-6
+                %center
+                  %label.control-label.question_title{:for => "quality"} Spokojnosť s personálom
+                  %select.form-control{:name => "quality"}
+                    %option{:value => 1} Nadmieru spokojný
+                    %option{:value => 2} Spokojný
+                    %option{:value => 3} Priemer
+                    %option{:value => 4} Nespokojný
+                    %option{:value => 5} Nadmieru nespokojný
+
+            .form-group
+              .col-sm-3
+              .col-sm-6
+                %center
+                  %label.control-label.question_title{:for => "meno"} Meno*
+                  %input.form-control#user-name{:placeholder => "Meno Priezvisko", :type => "text", :name => "name", :onfocus=>"jsKeyboard.focus(this)"}
+                  %img.check-name{:src => "images/check.png"}
+
+            .form-group
+              .col-sm-3
+              .col-sm-6
+                %center
+                  %label.control-label.question_title{:for => "email"} Mail*
+                  %input.form-control#mail{:placeholder => "vas@mail.sk", :type => "email", :name => "email", :onfocus=>"jsKeyboard.focus(this)"}
+                  %img.check-email{:src => "images/check.png"}
+
+            .form-group
+              .col-sm-3
+              .col-sm-6
+                %center
+                  %label.control-label.question_title{:for => "pl"} Vaše pripomienky
+                  %textarea.form-control#feedback{:rows => "6", :type => "text", :name => "feedback", :onfocus=>"jsKeyboard.focus(this)"}
+
+            .form-group.submit-button
+              .col-sm-3
+              .col-sm-6
+                %center
+                  %button.btn.btn-nav.submit#submit{:type => "submit", :disabled => "disabled", :"data-placement" => "right", :"data-content" => "Vivamus sagittis lacus vel augue laoreet rutrum faucibus."} Odpovedať
+
+          %br
+          %br
+
+        %hr.blue
+        %center
+          .additional
+            %h3 * - Povinné údaje
+
+        %hr.blue
+
+          %br
+          %br
+
+
+      .modal-footer
+        %button.btn.btn-lg.btn-close{"data-dismiss" => "modal", :type => "button"} Zavrieť

@@ -1,0 +1,178 @@
+#bodySchema {
+	& > div {
+		position: fixed;
+	}
+
+	#lebka {
+		top: 240px;
+		left: 495px;
+
+	}
+	#krk {
+top: 425px;
+left: 415px;
+	}
+	#rameno {
+top: 450px;
+left: 665px;
+
+	}
+	#laket {
+top: 675px;
+left: 690px;
+	}
+	#zapastie {
+top: 880px;
+left: 720px;
+	}
+	#chrbat {
+top: 615px;
+left: 500px;
+	}
+	#panva {
+top: 890px;
+left: 430px;
+	}
+	#koleno {
+top: 1230px;
+left: 440px;
+	}
+	#clenok {
+top: 1580px;
+left: 460px;
+	}
+}
+
+#partModal-clenok,
+#partModal-koleno,
+#partModal-panva,
+#partModal-chrbat,
+#partModal-zapastie,
+#partModal-laket,
+#partModal-rameno,
+#partModal-krk {
+	overflow-y:hidden;
+	font-family: rw-r;
+	.modal-dialog {
+		margin: 190px auto;
+
+		.modal-content {
+			background: rgba(0,0,0,0.75);
+			box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+			-o-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+			-webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+			-moz-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+
+			.modal-header {
+				color: #10b7d2;
+				font-family: rw-l;
+			}
+			.modal-body {
+				color: #10b7d2;
+			}
+		}
+	}
+}
+
+#partModal-clenok,
+#partModal-koleno,
+#partModal-panva,
+#partModal-chrbat,
+#partModal-zapastie,
+#partModal-laket,
+#partModal-rameno,
+#partModal-krk  {
+	.modal-body {
+	  padding-bottom: 0px;
+		.part {
+			.foto-info > div {
+				display: inline-block;
+			}
+			.foto-info {
+				font-size: 22px;
+			}
+			.main-info {
+				font-size: 18px;
+				.description {
+					float:right;
+				}
+				li.nav {
+					width:310px;
+					text-align: center;
+					a {
+						padding: 15px 0px;
+					}
+				}
+				.tab-content {
+					#sprain {
+						font-size:17px;
+						.sprain {
+							float: right;
+						}
+					}
+					#dislocation {
+						.dislocation-rtg {
+							float: right;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.modal-footer {
+		padding-top: 0px;
+	}
+}
+
+#partModal-koleno {
+	.modal-body {
+		.part {
+			.main-info {
+				li a {
+					padding: 15px 70px !important;
+				}
+			}
+		}
+	}
+}
+
+#partModal-laket {
+	.modal-body {
+		h3 {
+			font-weight: bolder;
+		}
+	}
+}
+
+img.body-left {
+	float: left;
+	margin-right: 20px;
+}
+
+img.body-right {
+	float: right;
+	margin-left: 20px;
+}
+
+.padding-top-20 {
+	padding-top:20px;
+}
+
+.padding-right-50 {
+	padding-right:50px;
+}
+
+.text-justify{
+	& * {
+		text-align: justify;
+	}
+}
+
+.body-paddding-justify {
+	padding-top:20px;
+	padding-right:50px;
+	& * {
+		text-align: justify;
+	}
+}

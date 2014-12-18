@@ -1,0 +1,138 @@
+%h2 Pobočky
+.offices
+  .container
+    .row
+      .col-md-4.first
+        .list-group.offices-1
+          %a.list-group-item.activ{:city=>"Banská Bystrica", :street=>"Horná 18", :optional=>"", :psc=>"974 01 Banská Bystrica 1", :phone=>"Tel.: 0850 003 333", :opening=>"8.00 - 17.00/8.00 - 17.00/8.00 - 17.00/8.00 - 17.00/8.00 - 17.00"}
+            %h4.list-group-item-heading Banská Bystrica
+            %p.list-group-item-text Horná 18
+
+
+          %a.list-group-item{:city=>"Brezno", :street=>"Rázusova 7", :optional=>"", :psc=>"977 01 Brezno", :phone=>"Tel.: 0850 003 333", :opening=>"8.00 - 16.00/8.00 - 16.00/8.00 - 16.00/8.00 - 16.00/8.00 - 16.00"}
+            %h4.list-group-item-heading Brezno
+            %p.list-group-item-text Rázusova 7
+
+
+          %a.list-group-item{:city=>"Lučenec", :street=>"Doktora Ľudovíta Bazovského 41", :optional=>"", :psc=>"984 01 Lučenec", :phone=>"Tel.: 0850 003 333", :opening=>"8.00 - 17.00/8.00 - 17.00/8.00 - 17.00/8.00 - 17.00/8.00 - 17.00"}
+            %h4.list-group-item-heading Lučenec
+            %p.list-group-item-text Doktora Ľudovíta Bazovského 41
+
+
+          %a.list-group-item{:city=>"Rimavská Sobota", :street=>"SNP 20", :optional=>"", :psc=>"979 01 Rimavská Sobota", :phone=>"Tel.: 0850 003 333", :opening=>"8.00 - 16.00/8.00 - 16.00/8.00 - 16.00/8.00 - 16.00/8.00 - 16.00"}
+            %h4.list-group-item-heading Rimavská Sobota
+            %p.list-group-item-text SNP 20
+
+          %a.list-group-item{:city=>"Veľký Krtíš", :street=>"Banícka 9-11, Blok 2", :optional=>"", :psc=>"990 01 Veľký Krtíš", :phone=>"Tel.: 0850 003 333", :opening=>"8.00 - 16.00/8.00 - 16.00/8.00 - 16.00/8.00 - 16.00/8.00 - 16.00"}
+            %h4.list-group-item-heading Veľký Krtíš
+            %p.list-group-item-text Banícka 9-11, Blok 2
+
+          %a.list-group-item{:city=>"Žiar nad Hronom", :street=>"Štefana Moyzesa 61", :optional=>"", :psc=>"965 01 Žiar nad Hronom", :phone=>"Tel.: 0850 003 333", :opening=>"8.00 - 16.00/8.00 - 16.00/8.00 - 16.00/8.00 - 16.00/8.00 - 16.00"}
+            %h4.list-group-item-heading Žiar nad Hronom
+            %p.list-group-item-text Štefana Moyzesa 61
+
+
+      .col-md-4.second
+        .office-info
+          .address
+            %h2.city Banská Bystrica
+            .street Horná 18
+            .optional
+            .psc 974 01 Banská Bystrica 1
+            .phone Tel.: 0850 003 333
+            %br
+          .opening
+            #pon.day
+              .name Pondelok:
+              .hours 8.00 - 17.00
+            #uto.day
+              .name Utorok:
+              .hours 8.00 - 17.00
+            #str.day
+              .name Streda:
+              .hours 8.00 - 17.00
+            #stv.day
+              .name Štvrtok:
+              .hours 8.00 - 17.00
+            #pia.day
+              .name Piatok:
+              .hours 8.00 - 17.00
+
+        .opening-time
+
+      .col-md-4.third
+        .list-group.offices-2
+
+          %a.list-group-item{:city=>"Zvolen", :street=>"J. Jiskru 4", :optional=>"", :psc=>"960 01 Zvolen 1", :phone=>"Tel.: 0850 003 333 ", :opening=>"8.00 - 16.00/8.00 - 16.00/8.00 - 16.00/8.00 - 16.00/7.30 - 16.00"}
+            %h4.list-group-item-heading Zvolen
+            %p.list-group-item-text J. Jiskru 4
+
+
+
+%h2 Novinky
+
+/ #accordion.panel-group
+/   .panel.panel-default
+/     .panel-heading
+/       %h4.panel-title
+/         %a{ :"data-toggle"=>"collapse", :"data-parent"=>"#accordion", :href=>"#collapseVzp1"}
+/           .date 31.02.2014 &nbsp
+/           .title Ročné zúčtovanie 2013
+
+/     #collapseVzp1.panel-collapse.collapse
+/       .inner-text
+/         %p Od 1.4.2014 dochádza k zmene adresy kam zasielať Návrh na kúpeľnú starostlivosť.
+/         %p Návrhy na kúpeľnú starostlivosť je potrebné zasielať na adresu:
+/         %br
+/         %br
+/         %address
+/           %strong Všeobecná zdravotná poisťovňa a.s
+/           %br
+/             Oddelenie zdravotných a revíznych činností
+/             %br
+/               Kúpeľná 5, Prešov 080 15
+/               %br
+
+
+/   .panel.panel-default
+/     .panel-heading
+/       %h4.panel-title
+/         %a{ :"data-toggle"=>"collapse", :"data-parent"=>"#accordion", :href=>"#collapseVzp2"}
+/           .date 27.01.2014 &nbsp
+/           .title Poistenci dostanú späť svoje peniaze za doplatky za lieky
+
+/     #collapseVzp2.panel-collapse.collapse
+/       .inner-text
+/         Od 1.4.2014 dochádza k zmene adresy kam zasielať Návrh na kúpeľnú starostlivosť.
+/         Návrhy na kúpeľnú starostlivosť je potrebné zasielať na adresu:
+/         %br
+
+/         %address
+/           %strong Všeobecná zdravotná poisťovňa a.s
+/           %br
+/             Oddelenie zdravotných a revíznych činností
+/             %br
+/               Kúpeľná 5, Prešov 080 15
+/               %br
+
+
+/   .panel.panel-default
+/     .panel-heading
+/       %h4.panel-title
+/         %a{ :"data-toggle"=>"collapse", :"data-parent"=>"#accordion", :href=>"#collapseVzp2"}
+/           .date 27.01.2014 &nbsp
+/           .title Zmena adresy zasielania Návrhov na kúpeľnú starostlivosť
+
+/     #collapseVzp2.panel-collapse.collapse
+/       .inner-text
+/         Od 1.4.2014 dochádza k zmene adresy kam zasielať Návrh na kúpeľnú starostlivosť.
+/         Návrhy na kúpeľnú starostlivosť je potrebné zasielať na adresu:
+/         %br
+
+/         %address
+/           %strong Všeobecná zdravotná poisťovňa a.s
+/           %br
+/             Oddelenie zdravotných a revíznych činností
+/             %br
+/               Kúpeľná 5, Prešov 080 15
+/               %br

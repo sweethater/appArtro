@@ -1,0 +1,96 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %title Orto
+
+    / %link{:href => "/css/jquery.carousel.fullscreen.css", :rel => "stylesheet"}/
+    %link{:href => "/css/bootstrap.css", :rel => "stylesheet"}/
+    %link{:href => "/css/orto.css", :rel => "stylesheet"}
+    %link{:href => "/css/buttons.css", :rel => "stylesheet"}
+    %link{:href => "/css/modals.css", :rel => "stylesheet"}
+    %link{:href => "/css/body.css", :rel => "stylesheet"}
+    %link{:href => "/css/bootstrap-tabs.css", :rel => "stylesheet"}
+    %link{:href => "/css/jsKeyboard.css", :rel => "stylesheet"}
+    %link{:href => "/css/video-js.min.css", :rel => "stylesheet"}
+    %link{:href => "/css/mediaelementplayer.min.css", :rel => "stylesheet"}
+    %link{:href => "/css/lightbox.css", :rel => "stylesheet"}
+
+    %link{:href => "/images/favicon.png", :rel => "icon", :type => "image/png"}
+
+    %script{:src => "/js/jquery-2.1.0.js", :type => "text/javascript"}
+    %script{:src => "/js/orto.js", :type => "text/javascript"}
+    %script{:src => "/js/clock.js", :type => "text/javascript"}
+    %script{:src => "/js/bootstrap.js", :type => "text/javascript"}
+    %script{:src => "/js/jsKeyboard.js", :type => "text/javascript"}
+    %script{:src => "/js/video.js", :type => "text/javascript"}
+    %script{:src => "/js/mediaelement-and-player.min.js", :type => "text/javascript"}
+    %script{:src => "/js/lightbox.js", :type => "text/javascript"}
+
+  %body
+
+    #loader
+      %img.loader-logo{ :src=> "images/artropro-loader.png" }
+
+    #wrapper
+      %video#bgvid{:preload=>"auto", :autoplay=>"true", :muted=>"muted", :volume=>"0"}
+        %source{:src => "/images/body-bg.mp4", :type => "video/mp4"}
+
+        / %source{:src => "/images/body.ogg", :type => "video/ogg"}
+        / %source{:src => "/images/body.webm", :type => "video/webm"}
+        / %source{:src => "/images/body.mp4", :type => "video/mp4"}
+
+      = yield
+
+      #clock
+      #clock-icon
+        %img{ :src=>"images/clock.svg"}
+
+      #ortotech-logo
+        %img{ :src=>"images/artropro-text.png"}
+
+      #ortotech-logo2
+        %img{ :src=>"images/artropro-logo.png"}
+
+      #calendar
+      #calendar-icon
+        %img{ :src=>"images/calendar.svg"}
+      / #ortotech-man
+      /   %img{ :src=>"images/vitruvian-men.png"}
+
+
+      #footer_navigation
+        .first-line
+          %button.btn.btn-nav-lg.btn-lg.first{:type => "button", "data-target" => "#trafficModal", "data-toggle" => "modal"} Jednodňová chirurgia
+          %button.btn.btn-nav-lg.btn-lg.second{:type => "button", "data-target" => "#rehabModal", "data-toggle" => "modal"} 
+            Ortopédia
+            %br
+            Športová traumatologia
+        .second-line
+          %button.btn.btn-nav.btn-lg{:type => "button", "data-target" => "#ortotechModal", "data-toggle" => "modal"} O nás
+          %button.btn.btn-nav.btn-lg.btn-nav-offset{:type => "button", "data-target" => "#userInfoModal", "data-toggle" => "modal"} Informácie pre klientov
+          %button.btn.btn-nav.btn-lg.btn-nav-offset{:type => "button", "data-target" => "#surveyModal", "data-toggle" => "modal"} Anketa pre pacientov
+
+      = haml :"body/schema"
+
+      / = haml :"body/part-clenok"
+      = haml :"body/part-koleno"
+      = haml :"body/part-panva"
+      / = haml :"body/part-chrbat"
+      = haml :"body/part-zapastie"
+      = haml :"body/part-laket"
+      = haml :"body/part-rameno"
+      = haml :"body/part-krk"
+
+      = haml :"modals/rehabs"
+      = haml :"modals/survey"
+      = haml :"modals/user_info"
+      = haml :"modals/traffic"
+      / = haml :"modals/devices"
+      = haml :"modals/ortotech"
+
+
+    #virtualKeyboard
+
+
+
