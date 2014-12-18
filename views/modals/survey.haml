@@ -11,24 +11,33 @@
               .col-sm-3
               .col-sm-6
                 %center
-                  %label.control-label.question_title{:for => "doctor"} Ošetrujúci lekár(ka)
-                  %select.form-control{:name => "doctor"}
-                    %option{:value => 1} MUDr. Štefan Petriščák
-                    %option{:value => 2} MUDr. Gražyna Gállová
-                    / %option{:value => 3} MUDr. Konderová
-                    / %option{:value => 4} MUDr. Kubišová
+                  .block
+                    %label.control-label.question_title{:for => "doctor"} Ošetrujúci lekár(ka)
+                    %select#doctors.form-control{:size=>3,:name => "doctor"}
+                      %option.first{:value => 1} MUDr. Štefan Petriščák, PhD.
+                      %option{:disabled => "disabled"}
+                      %option.second{:value => 2} MUDr. Dalimír Jančovič
+                      / %option{:value => 3} MUDr. Konderová
+                      / %option{:value => 4} MUDr. Kubišová
 
             .form-group
               .col-sm-3
               .col-sm-6
                 %center
-                  %label.control-label.question_title{:for => "quality"} Spokojnosť s personálom
-                  %select.form-control{:name => "quality"}
-                    %option{:value => 1} Nadmieru spokojný
-                    %option{:value => 2} Spokojný
-                    %option{:value => 3} Priemer
-                    %option{:value => 4} Nespokojný
-                    %option{:value => 5} Nadmieru nespokojný
+                  .block
+                    %label.control-label.question_title{:for => "quality"} Spokojnosť s personálom
+                    %select#ranking.form-control{:size=>5,:name => "quality"}
+                      / %option{:disabled => "disabled"}
+                      %option{:value => 1} Nadmieru spokojný
+                      / %option{:disabled => "disabled"}
+                      %option{:value => 2} Spokojný
+                      / %option{:disabled => "disabled"}
+                      %option{:value => 3} Priemer
+                      / %option{:disabled => "disabled"}
+                      %option{:value => 4} Nespokojný
+                      / %option{:disabled => "disabled"}
+                      / %option{:value => 5} Nadmieru nespokojný
+                      / %option{:disabled => "disabled"}
 
             .form-group
               .col-sm-3
@@ -74,4 +83,4 @@
 
 
       .modal-footer
-        %button.btn.btn-lg.btn-close{"data-dismiss" => "modal", :type => "button"} Zavrieť
+        %button.btn.btn-lg.btn-close.survey-close-btn{"data-dismiss" => "modal", :type => "button"} Zavrieť

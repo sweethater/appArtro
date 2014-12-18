@@ -1,13 +1,31 @@
-#rehabModal,
+.video-modals{
+	height: 720px;
+	background: rgba(0,0,0,0.9);
+	width: 1066px;
+	border-radius: 20px;
+	margin-left: 5px;
+	.modal-header {
+		color: #10b7d2;
+	} 
+	.video-layout{
+		border: 1px solid #10b7d2;
+		margin-left: 195px;
+		margin-right: 175px;
+		border-radius: 5px;
+	}
+}
+
+
+#ortopedyModal,
 #surveyModal,
 #userInfoModal,
-#trafficModal,
-#devicesModal,
-#ortotechModal {
+#daysurgeryModal,
+#advicesModal,
+#artroproModal {
 	overflow-y:hidden;
 	font-family: rw-r;
 	.modal-content {
-			background: rgba(0,0,0,0.85);
+			background: rgba(0,0,0,0.9);
 			box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
 			-o-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
 			-webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
@@ -18,6 +36,7 @@
 				font-family: rw-l;
 			}
 			.modal-body {
+				overflow: hidden;
 				color: #10b7d2;
 				.nav.nav-tabs.nav-global {
 					li {
@@ -29,23 +48,6 @@
 				}
 			}
 	}
-}
-
-#trafficModal .modal-dialog {
-	margin: 250px auto;
-}
-
-
-#devicesModal .modal-dialog {
-	margin: 330px auto;
-}
-
-#ortotechModal .modal-dialog {
-	margin: 330px auto;
-}
-
-#surveyModal .modal-dialog {
-	margin: 300px auto;
 }
 
 .modal-title {
@@ -67,6 +69,7 @@
 #surveyModal {
 	.modal-content {
 		.modal-body {
+			padding-top:300px;
 			form {
 				.form-group {
 					&.submit-button {
@@ -78,15 +81,35 @@
 						color: #10b7d2;
 						margin-bottom: 12px;
 					}
-					select,
+					.block {
+						vertical-align:top;
+						overflow:hidden;
+					}
+					select option {
+						text-align:center;
+					}
 					input  {
 						height: 70px;
-						font-size: 25px;
+						font-size: 30px;
 						color: #10b7d2;
+						margin-right: -28px;
+					}
+					select#doctors {
+						height: 125px;
+						font-size: 30px;
+						color: #10b7d2;
+						margin-right: -28px;
+					}
+					select#ranking {
+						height: 160px;
+						font-size: 30px;
+						color: #10b7d2;
+						margin-right: -28px;
 					}
 					textarea {
 						font-size: 20px;
 						color: #10b7d2;
+						margin-right: -28px;
 					}
 				}
 			}
@@ -110,11 +133,17 @@
 		font-size: 20px;
 	}
 	.client-info {
+		li {
+			width:515px;
+			a {
+				text-align: center;
+			}
+		}
 		li.first a {
-			padding: 20px 20px;
+			padding: 20px 15px;
 		}
 		li.second a {
-			padding: 20px 165px;
+			padding: 20px 145px;
 		}
 	}
 	.tab-content {
@@ -123,148 +152,7 @@
 			background-color: white;
 			border-radius: 5px;
 		}
-		.tab-content.insurance {
-			#vzp,
-			#dovera,
-			#union {
-				.panel-title {
-					color: #10b7d2;
-					a {
-						text-decoration: none;
-						& > div {
-							display:inline-block;
-							font-size: 21px;
-						}
-					}
-					.title {
-						font-weight: bolder;
-					}
-				}
-				.inner-text {
-					margin: 5px 45px;
-					font-size: 16px !important;
 
-				}
-				.offices {
-					.container {
-						padding-left: 0px;
-						.row {
-							margin-right: 0px;
-							.list-group {
-								.list-group-item {
-									background-color: transparent;
-									border-color: #10b7d2;
-									color: #10b7d2;
-									h4 {
-										color: #10b7d2;
-										font-weight: bolder;
-									}
-									.list-group-item-text {
-										font-weight: bolder;
-										font-size: 15px;
-									}
-									&.activ {
-										color: white;
-										background-color: #10b7d2;
-										h4 {
-											color: white;
-
-										}
-									}
-								}
-							}
-							.col-md-4 {
-								&.first {
-									padding-right: 0px;
-									.list-group-item {
-										&:first-child {
-											border-top-right-radius: 0px;
-										}
-										&:last-child {
-											border-bottom-right-radius: 0px;
-										}
-									}
-								}
-								&.second {
-									padding-right: 0px;
-									padding-left: 0px;
-									border-top: 1px solid;
-									border-bottom: 1px solid;
-									border-right: 1px solid;
-									height: 385px;
-									.office-info {
-										font-weight: bolder;
-										padding: 0px 20px;
-										font-size: 18px;
-										.city {
-										}
-										.street {
-
-										}
-										.opening {
-											font-size: 19px;
-
-											.day > * {
-												display: inline-block;
-											}
-											#pon .name {
-												padding-right: 15px;
-											}
-											#uto .name {
-												padding-right: 37px;
-											}
-											#str .name {
-												padding-right: 42px;
-											}
-											#stv .name {
-												padding-right: 37px;
-											}
-											#pia .name {
-												padding-right: 47px;
-											}
-										}
-									}
-								}
-								&.third {
-									padding-left: 0px;
-									.list-group-item {
-										&:first-child {
-											border-top-left-radius: 0px;
-										}
-										&:last-child {
-											border-bottom-left-radius: 0px;
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-				.map {
-					position: relative;
-					img.mini{
-						position: absolute;
-						&#bb {
-							top: 80px;
-							left: 319px;
-						}
-						&#bs {
-							top: 161px;
-							left: 206px;
-						}
-						&#zv {
-							top: 170px;
-							left: 309px;
-						}
-						&#dt {
-							top: 182px;
-							left: 419px;
-						}
-					}
-
-				}
-			}
-		}
 		#drugs .drugs {
 			font-weight: bolder;
 			li a {
@@ -295,20 +183,32 @@
 	}
 }
 
-#trafficModal {
-	.traffic-info {
+#daysurgeryModal {
+	.oneday-surgery {
+		p, li {
+			text-align:justify;
+			font-size:19px;
+		}
+	}
+	.daysurgery-info {
 		font-size: 22px;
 		li a {
-			padding: 20px 85px;
+			padding: 20px 100px;
 			margin: 0px 20px;
 		}
+	}
+
+	.play-video {
+		float: right;
+		margin-left: 20px;
+		margin-bottom: 21px;
 	}
 
 	.bs-callout{
 		margin-left:25px;
 	}
 
-	#bus {
+	#about-daysurgery {
 		.text {
 			font-size:19px;
 			margin-top:40px
@@ -319,75 +219,12 @@
 			}
 		}
 	}
+	.text {
+		text-align:justify;
+		min-height: 135px;
+	}
 	.tab-content {
 		color: #10b7d2;
-
-		.description {
-			.week,
-			.weekend {
-				display: inline-block;
-				font-size: 22px;
-				font-weight: bolder;
-			}
-			.week {
-				margin-left: 110px;
-			}
-			.weekend {
-				margin-left: 160px;
-			}
-
-		}
-		.description-secondary {
-			.week,
-			.weekend {
-				font-weight: bolder;
-				display: inline-block;
-				font-size: 22px;
-			}
-			.week {
-				margin-left: 135px;
-			}
-			.weekend {
-				margin-left: 180px;
-			}
-		}
-
-		.additional {
-			font-size: 20px;
-			font-weight: bolder;
-		}
-
-		.bus-table {
-			color: #10b7d2;
-			width: 380px;
-			font-weight: bolder;
-			display: inline-block;
-			th {
-				font-size: 20px;
-				border-color: #10b7d2;
-				text-align: center;
-				&:first-of-type {
-					border-right: 2px solid #10b7d2;
-				}
-				&.hour {
-					width: 85px;
-				}
-				&.minute {
-					width: 280px
-				}
-			}
-			td {
-				font-size: 21px;
-				border-color: #10b7d2;
-				text-align: center;
-				&:first-of-type {
-					border-right: 2px solid #10b7d2;
-				}
-			}
-		}
-		.week {
-			margin-left: 0px;
-		}
 	}
 }
 
@@ -401,113 +238,49 @@
 }
 
 
-#devicesModal {
+#advicesModal {
 	.devices {
-
-		.group-list-header {
-			color: #10b7d2;
-			font-size: 30px;
-			padding-left: 5px;
+		.nav-pills li {
+			width: 343px;
+			font-size: 22px;
+			text-align: center;
 		}
-
-		.nav.nav-tabs.nav-global {
-			width: 115px;
+		.main-info{
+			font-size: 18px;
+			text-align:justify;
 		}
-
-		.tab-content {
-			.body {
-				min-height: 800px;
-				.text {
-					padding-top: 5px;
-					padding-left: 150px;
-					padding-right: 40px;
-					.list {
-						font-size: 20px;
-						font-weight: bolder;
-
-					}
-					images {
-						top: 50px;
-						left: 100px;
-						position: relative;
-						.img-thumbnail {
-							margin-right: 40px;
-							margin-bottom: 40px;
-
-						}
-					}
-				}
+		.steps {
+			ul, p {
+				padding-right: 40px;
+			}
+			li {
+				padding: 5px 0px;
+			}
+			h3 {
+				font-weight: bolder;
+			}
+			.bs-callout {
+				padding-bottom: 20px;
 			}
 		}
-
-		h4.panel-title {
-			color: #10b7d2;
-			.primary {
-				font-size: 20px;
-			}
-			.secondary {
-				font-size: 16px;
-			}
-		}
-		.panel-body {
-			.section-title {
-				.primary {
-					display: inline-block;
-					font-size:18px
-				}
-				.secondary {
-					display: inline-block;
-					font-size:17px
-				}
-			}
-			.list {
-				margin-left: 25px;
-			}
-			.text {
-				margin-left: 25px;
-			}
-		}
-		ul.torso-list li a,
-		ul.prosthesis-list li a {
-			font-size: 17px;
-			padding: 12px 123px;
-		}
-		ul.legs-list li {
-			font-size: 17px;
-			width: 440px;
-			float: none;
-			display: inline-block;
-			a {
-				text-align: center;
-			}
-		}
-		ul.hands-list li {
-			font-size: 17px;
-			&.first,
-			&.second {
-				width: 440px;
-			}
-			&.third {
-				width: 880px;
-			}
-			a {
-				text-align: center;
-			}
+		.important {
+			font-weight: bolder;
+			padding: 30px 146px;
+			font-size: 22px;
 		}
 	}
 }
 
 
-#ortotechModal {
+#artroproModal {
 	ul.ortotech {
 		li a{
-			font-size: 22px;
-			padding: 15px 115px;
+			font-size: 28px;
+			padding: 15px 205px;
 		}
 	}
 	#about {
 		.container.about {
-			margin-top:15px;
 			p {
 			 	font-size: 18px;
 			 	text-align:justify;
@@ -567,152 +340,12 @@
 	}
 }
 
-#rehabModal {
-	.depart-rehab{
-		font-size: 22px;
-		li a {
-			padding: 20px 145px;
-		}
-	}
-	.departure-table {
-		font-size:20px;
-		font-weight: bold;
-		width: 800px;
-		margin-left: 70px;
-		margin-top: 70px;
-		.city {
-			font-weight: bolder;
-			font-size: 24px;
-		}
-	}
-	.departure-info {
-		margin-top: 70px;
-		margin-bottom: 40px;
-		.icon {font-size: 30px;}
-		.text {font-size: 25px;}
-	}
+#ortopedyModal {
 
-	.city {
-		font-size: 16px;
-		.info {
-
-		}
-		.foto {
-			& img {
-				margin: 10px 40px;
-			}
-		}
-		.map-contact > div {
-			display: inline-block;
-		}
-		.contact {
-			margin-top: 30px;
-			margin-left: 20px;
-		}
-		.map {
-
-		}
-	}
-	.map-contact {
-
-		.map {
-			position: absolute;
-			padding-top: 45px;
-			right: 25px;
-			margin-bottom: 40px;
-		}
-	}
-
-	#rehab.tab-pane .nav-global {
-		margin-bottom: 30px;
-	}
-	.info .text,
-	.bs-callout {
-		font-weight: bold;
-		text-align:justify;
-	}
-
-	.tab-pane {
-		.text {
-			margin-right: 45px;
-			padding-left: 190px;
-		}
-		.bs-callout {
-			padding-top: 20px;
-			padding-bottom: 20px;
-		}
-	}
-	#a {
-		img {
-			&.one {
-				float: right;
-				margin-left: 20px;
-				margin-bottom: 20px;
-			}
-			&.four {
-				margin-top: 20px;
-				float: left;
-				margin-left: 190px;
-			}
-		}
-		.images {
-			margin-left: 190px;
-		}
-		.bs-callout {
-			margin-left: 520px;
-			margin-right: 45px;
-			padding-right: 20px;
-		}
-	}
-	#b {
-		img {
-			&.one {
-				float: right;
-				margin-left: 20px;
-				margin-bottom: 20px;
-			}
-		}
-		.images {
-			margin-left: 220px;
-		}
-		.bs-callout {
-			margin-left: 190px;
-			margin-right: 45px;
-			padding-right: 20px;
-		}
-	}
-	#c {
-		img {
-			float: left;
-			margin-top: 45px;
-		}
-		.bs-callout {
-			margin-left: 190px;
-			margin-right: 45px;
-			padding-right: 20px;
-		}
-	}
-	#d {
-		img {
-			margin-bottom: 20px;
-		}
-		.images {
-			margin-left: 220px;
-		}
-		.bs-callout {
-			margin-left: 190px;
-			margin-right: 45px;
-			padding-right: 20px;
-		}
-	}
-	#e {
-		img {
-			float: left;
-		}
-		.bs-callout {
-			margin-left: 450px;
-			margin-right: 45px;
-			padding-right: 20px;
+	.sportova-trauma {
+		p, li {
+			font-size:19px;
+			text-align: justify;
 		}
 	}
 }

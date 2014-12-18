@@ -1,0 +1,133 @@
+#daysurgeryModal.commonModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+        %h2#myModalLabel.modal-title Jednodňová chirurgia
+      .modal-body
+
+
+
+        %ul.nav.nav-pills.daysurgery-info
+          %li.first.active
+            %a{"data-toggle" => "pill", :href => "#about-daysurgery"} Čo je jednodňová chirurgia?
+          %li.second
+            %a{"data-toggle" => "pill", :href => "#operations"} Najčastejšie operácie
+
+        %hr.blue
+
+        .tab-content
+
+          #about-daysurgery.tab-pane.fade.in.active
+            .container
+              .row
+                .col-md-12
+                  .oneday-surgery
+                    %p Jednodňová zdravotná starostlivosť je zdravotná starostlivosť, ktorá sa poskytuje formou ambulantnej starostlivosti - pobyt na lôžku je kratší ako 24 hod. Ide o moderný spôsob zdravotnej starostlivosti,ktorý je vo vyspelých krajinách zaužívaný v rôznych medicínskych odboroch. Základným princípom je, že pooperačná hospitalizácia si nevyžaduje viac ako 24 hodín. Napríklad v USA takto artroskopicky ošetrujú viac ako 90% pacientov s poškodením menisku v kolena. Ide o menšie špecializované centrá a kliniky "One day surgery".Na Slovensku sa tento spôsob zdravotnej starostlivosti postupne rozšruje. Je veľmi oblúbený u pacientov,ktorí boli týmto spôsobom ošetrovaní a zároveň výhodný pre poisťovne.
+                    %p Jednodňová zdravotná starostlivosť sa sklada z troch výkonou:
+                    %ul
+                      %li Diagnostický výkony
+                      %li Liečebný výkony
+                      %li Operačný výkony
+
+                    %p V otazke jednodňovej zdravotnej starostlivosti je potrebné uvedomiť si niekoľko podstatných faktov:
+                    %ul
+                      %li Nie každý pacient je vhodný na operáciu v rámci jednodňovej chirurgie ( len zdravý pacienti resp. len s ľahkým ochorením )
+                      %li Nie každé  chirurgické ochorenie je vhodné na zákrok v rámci jednodňovej chirurgie (niekoľkohodinové operácie ... )
+                      %li Nie každé pracovisko môže vykonávať  zákroky jednodňovej chirurgie
+
+                    %p Operačný výkon v jednodňovej chirurgii musí byť urobený s mimoriadnou dôkladnosťou a vysokou kvalitou. Tieto zákroky vykonávajú plne kvalifikovaný chirurgovia (niet priestoru na experimenty resp. výuky mladých chirurgov).
+
+                    %center
+                    %img.body-left{:src=>"images/body/oneday-surgery2.png"}
+
+                    %p Jednodňová ambulantná strostlivosť je podporovaná aj vládnym programom ministerstva zdravotníctva v rámci redukcie lôžok v nemocniciach a presunu starostlivosti do efektívnejšej ambulantnej starostlivosti.
+
+                    %p Výhody pre pacienta:
+                    %ul
+                      %li Minimálny pobyt v zdravotníckom zariadení
+                      %li Vysoká špecializácia lekárov a celého tímu
+                      %li Moderné technické vybavenie operačnej sály
+                      %li Nižšie riziko nemocničnej nákazy
+                      %li Presne plánovaný termín  a čas operácie
+                      %li Individuálny prístup celého zdravotníckeho personálu
+
+
+
+          #operations.tab-pane.fade
+            .container
+              .row
+                .col-md-11
+
+                  .bs-callout.bs-callout-info
+                    .text
+                      %h4
+                        %b POŠKODENIE MENISKU
+                      #operacia1.play-video{:modal_src=>"#video1Modal", :video_src=>"video#operation-video1"}
+                        %img{:src=>"images/play-video.png"}
+                      Najčastejšia operácia kolenného kĺbu je práve artroskopické ošetrenie poškodeného menisku. Poškodenie menisku vzniká opotrebovaním vo vyššom veku alebo po úraze. Zväčša je poškodená časť menisku odstránená, čím je pacient zbavený bolesti. U mladých ľudí a čerstvých úrazov sa meniskus dá zachovať prišitím naspäť na pôvodné miesto.
+
+
+                  .bs-callout.bs-callout-info
+                    .text
+                      %h4
+                        %b POŠKODENIE CHRUPAVIEK
+                      #operacia1.play-video{:modal_src=>"#video2Modal", :video_src=>"video#operation-video2"}
+                        %img{:src=>"images/play-video.png"}
+                      Veľmi často dochádza pri športových úrazoch k poškodeniu chrupaviek. Podobne aj starnutím dochádza k prirodzenému opotrebovaniu chrupaviek. Artroskopicky sa počiatočné štádia poškodenia dajú veľmi efektívne ošetriť. Pokročilé štádia poškodenia chrupaviek sa ošetrujú artroskopicky ako prevencia ich ďalšieho znehodnotenia a vývoja artrózy – nezvratného poškodenia kĺbu.
+
+                  .bs-callout.bs-callout-info
+                    .text
+                      %h4
+                        %b PLASTIKA PREDNÉHO SKRÍŽENÉHO VÄZU
+                      #operacia1.play-video{:modal_src=>"#video3Modal", :video_src=>"video#operation-video3"}
+                        %img{:src=>"images/play-video.png"}
+                      Všetky rotačné poranenia kolena sú príčinou poškodenia predného skríženého väzu. Spôsobujú nestabilitu kolena a z toho vyplývajúce ťažkosti pri športe a záťaži aj v bežnom živote. Návrat do vrcholového športu a pracovného procesu je častá vďaka modernej technike náhrade väzu. Výber a fixácia novej šľachy je proces, ktorý má viacero postupov preto sa ku každému prípadu pristupuje špecificky.
+
+                  .bs-callout.bs-callout-info
+                    .text
+                      %h4
+                        %b KOMPLEXNÉ PORANENIE KOLENA
+                      #operacia1.play-video{:modal_src=>"#video4Modal", :video_src=>"video#operation-video4"}
+                        %img{:src=>"images/play-video.png"}
+                      Pri úrazoch kolena sú veľmi často poškodené viaceré štruktúry. Tieto úrazy sú sprevádzané zakrvácaním do kolena. Každé zakrvácanie do kolena je potrebné ošetriť artroskopickou operáciou. Koleno sa musí vyčistiť od krvi, musia byť ošetrené poškodené väzy, menisky a chrupavky.
+
+                  .bs-callout.bs-callout-info
+                    .text
+                      %h4
+                        %b PLASTIKA RAMENNÉHO KĹBU PRI NESTABILNOM RAMENE
+                      #operacia1.play-video{:modal_src=>"#video5Modal", :video_src=>"video#operation-video5"}
+                        %img{:src=>"images/play-video.png"}
+                      Po úraze ramena často dochádza k opakovanému vykĺbovaniu ramenného kĺbu. Takýto stav sa nazýva nestabilné rameno. Operačná metóda pozostáva zo zošitia kĺbového puzdra a jeho plastiky pomocou operačného rezu. Toto je otvorená operácia nestability ramenného kĺbu. V niektorých prípadoch sa efektívne používa artroskopická technika pomocou dvoch malých rezov a fixácii poškodených štruktúr v ramene špeciálnymi fixačnými skobičkami. Artroskopická metóda má výhodu pre pacienta estetickú, výhodu v malej operačnej záťaži, ale je finančne podstatne náročnejšia ako je otvorená operácia
+
+                  .bs-callout.bs-callout-info
+                    .text
+                      %h4
+                        %b POŠKODENIE OBALU RAMENNÉHO KĹBU
+                      #operacia1.play-video{:modal_src=>"#video6Modal", :video_src=>"video#operation-video6"}
+                        %img{:src=>"images/play-video.png"}
+                      Pri úrazoch alebo opotrebovaní vzniká poškodenie obalu ramenného kĺbu, ktorý je zodpovedný za pohyblivosť ramena. Tento obal sa nazýva manžeta rotátorov. Pri jej poškodení vznikajú bolesti ramena a hybnosť v ramennom kĺbe je obmedzená v rôznej miere. Otvorená operácia ramena je určená k zošitiu poškodenej manžety, jej plastike a k obnoveniu hybnosti v ramene a zbaveniu bolesti pacienta. Táto operácia je niekedy efektívna aj použitím artroskopickej techniky.
+
+                  .bs-callout.bs-callout-info
+                    .text
+                      %h4
+                        %b SUBAKROMIONÁLNA DEKOMPRESIA
+                      Najmodernejšia artroskopická technika zbavuje bolesti ramena s obmedzením hybnosti. Nahradzuje metódu, ktorá sa v praxi dlho riešila iba rehabilitáciou a aplikáciou kortikoidov. Poskytuje výrazné zlepšenie hybnosti ramena.
+
+                  .bs-callout.bs-callout-info
+                    .text
+                      %h4
+                        %b IMPINGEMENT ČLENKOVÉHO KĹBU
+                      Podvrtnutie členkového kĺbu sa vyskytuje u športovcov. Súčasne je to najčastejší úraz vôbec aj u ľudí, ktorí vôbec nešportujú. Opakovaním úrazu vzniká syndróm ,,bolestivého členka“. Artroskopická operácia impingementu (útlaku) v členku zbavuje bolesti a zlepšuje rozsah hybnosti.
+
+                  .bs-callout.bs-callout-info
+                    .text
+                      %h4
+                        %b EXTRAKCIA OSTEOSYNTETICKÉHO MATERIÁLU
+                      Zlomeniny riešené operačne s použitím osteosyntetického materiálu (skrutky, dlahy...) si po zhojení zlomeniny vyžadujú jeho operačné odstránenie.
+
+
+
+      .modal-footer
+        %button.btn.btn-lg.btn-close{"data-dismiss" => "modal", :type => "button"} Zavrieť
+

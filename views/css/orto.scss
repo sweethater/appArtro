@@ -15,7 +15,14 @@
   src: url('../fonts/Raleway-Thin.otf');
 }
 
-
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
 #loader {
   position: fixed;
@@ -23,12 +30,27 @@
   top: 0px;
   width: 100%;
   height: 100%;
-  z-index: 99999;
+  z-index: 9000;
   background: -webkit-radial-gradient(center, circle closest-corner, #0D7EFF 20%, #000000 100%);
+  background: -moz-radial-gradient(center, circle closest-corner, #0D7EFF 20%, #000000 100%);
+
   .loader-logo {
+    z-index: 9010;
      position: fixed;
-     top:300px;
-     left:80px;
+     top:600px;
+     left:100px;
+  }
+  .loader-glow {
+    z-index: 9005;
+     position: fixed;
+     top:600px;
+     left:100px;
+  }
+  .finger {
+    z-index: 9005;
+    position: fixed;
+    bottom:252px;
+    right:300px;
   }
 }
 
@@ -44,51 +66,52 @@
   min-height: 100%;
 }
 
-#clock {
-  height: 100px;
-  width: 150px;
+.calendar {
+  bottom: 270px;
+  left: 808px;
   margin: auto;
-  position: absolute;
-  right: 0;
-  padding-top: 5px;
-  font-family: rw-r;
-  text-align: center;
-  color: white;
-  font-size: 40px;
-  color: #e63e6f;
-  font-weight: bolder;
+  position: fixed;
+  .date {
+    position: relative;
+    .month {
+      font-family: rw-r;
+      font-size: 18px;
+      position: absolute;
+      font-weight: bolder;
+      top: -134px;
+      left: 17px;
+    }
+    .year {
+      font-family: rw-r;
+      font-size: 16px;
+      position: absolute;
+      font-weight: bolder;
+      color: #80233b;
+      top: -131px;
+      left: 113px;
+    }
+    .day {
+      position: absolute;
+      top: -115px;
+      left: 50px;
+      width: 70px;
+      height: 70px;
+      font-size: 65px;
+      color: #68645b;
+      .day-window {
+        text-align: center;
+        vertical-align: middle;
+
+      }
+    } 
+  }
 }
 
-#clock-icon img {
-  margin: auto;
-  position: absolute;
-  right: 130px;
-  padding-top: 5px;
+#artropro-logo {
+  position:fixed;
+  top: 10px;
+  left: 10px;
 }
-
-#calendar {
-  height: 100px;
-  width: 150px;
-  margin: auto;
-  position: absolute;
-  right: 0;
-  padding-top: 80px;
-  font-family: rw-r;
-  text-align: center;
-  color: white;
-  font-size: 40px;
-  color: #e63e6f;
-  margin-right: -5px;
-  font-weight: bolder;
-}
-
-#calendar-icon img {
-  margin: auto;
-  position: absolute;
-  right: 130px;
-  padding-top: 80px;
-}
-
 
 #ortotech-logo {
   position:fixed;
@@ -123,7 +146,7 @@
 hr.solid {
   border: 0;
   height: 1px;
-  background-color: #10b7d2;
+  background-color: #10b7d2 !important;
 }
 
 hr.blue {
@@ -138,7 +161,41 @@ hr.blue {
   }
 }
 
+.padding-down-15 {
+  padding-bottom: 15px;
+}
 
+.padding-right-15 {
+  padding-right: 15px;
+}
+
+.padding-right-30 {
+  padding-right: 30px;
+}
+
+.padding-top-10 {
+  padding-top: 10px;
+}
+
+.height {
+  height: 320px;
+}
+
+.work-hours {
+  font-size: 21px;
+  td {
+    border-top: 1px solid #10b7d2;
+  }
+}
+
+.photo {
+  float: left;
+}
+
+.about-doctor{
+  font-size:18px;
+  font-weight: normal;
+}
 
 .bs-callout-info {
   background-color: rgba(91,192,222,0.15);
@@ -255,6 +312,52 @@ img.left{
   width: 64px;
   height: 64px;
   border: 2px solid #10b7d2;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -o-border-radius: 100px;
+  -ms-border-radius: 100px;
+  border-radius: 100px;
+  /* Giving Animation Function */
+  -webkit-animation: pulse 2s linear infinite;
+  -moz-animation: pulse 2s linear infinite; 
+  border-image: initial;
+}
+
+.loader_pulse_rays {
+  margin: 0 auto;
+  border-radius: 100px;
+  position: absolute;
+  right:360px;
+  bottom:360px;
+  z-index: 10;
+  background-color: transparent;
+  opacity: 0.1;
+  width: 80px;
+  height: 80px;
+  border: 4px solid #e64973;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -o-border-radius: 100px;
+  -ms-border-radius: 100px;
+  border-radius: 100px;
+  /* Giving Animation Function */
+  -webkit-animation: pulse 2s linear infinite;
+  -moz-animation: pulse 2s linear infinite; 
+  border-image: initial;
+}
+
+.loader_pulse_rays2 {
+  margin: 0 auto;
+  border-radius: 100px;
+  position: absolute;
+  right:350px;
+  bottom:350px;
+  z-index: 10;
+  background-color: transparent;
+  opacity: 0.1;
+  width: 100px;
+  height: 100px;
+  border: 6px solid #e64973;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   -o-border-radius: 100px;

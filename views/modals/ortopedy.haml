@@ -1,0 +1,60 @@
+
+#ortopedyModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+        %h2#myModalLabel.modal-title Ortopédia a Športová traumatológia
+      .modal-body
+        .container
+          .row
+            .col-md-12
+              .sportova-trauma
+                %h3 Čím sa zaoberá?
+                %p Športová traumatológia a ortopédia sa zameriava na diagnostiku a liečbu úrazov ,ktoré vznikajú  pri vrcholovom športe, ale aj pri rekreačnom a príležitostnom športovaní bežných ľudí. Príčinou bývajú tvrdé kontaktné súboje alebo nepripravenosť organizmu na náročné výkony resp. s nezvládnutím techník jednotlivých športov. Tieto úrazy však majú svoju špecifickosť. Pre vrcholových športovcov je úraz členkového, kolenného alebo ramenného kĺbu tým najzávažnejším problémom, pretože sa potrebujú čo najskôr vrátiť do športovej aktivity.
+                %p Vo vyspelých svetových krajinách je liečba športových úrazov často vysunutá z veľkých nemocníc do malých, ale vysoko špecializovaných privátnych centier tzv. jednodňovej chirurgie.
+
+                %h3 Aké sú najčastejšie športové úrazy?
+                %p Najčastejším športovým úrazom je podvrtnutie členkového, resp. kolenného kĺbu, ktoré sa často vyskytuje vo volejbale a futbale. Vo väčšine prípadov ide o poranenie tzv. mäkkých častí kĺbu. V ťažších prípadoch môže byť pridružená aj zlomenina jednej alebo viacerých kostí. Jednoduché poranenie meniskov v kolene sa dnes považuje za pomerne bežný a ľahký úraz, ktorý je možné ošetriť artroskopicky. Veľmi často však dochádza ku vážnejším úrazom, spojených s poškodením tzv. skrížených väzov kolena. Tento stav často spôsobuje pocit voľnosti kolenného kĺbu a je častou príčinou ukončenia kariéry športovca.
+                %p Nadhlavoví športovci (tenis, hádzaná), ale veľmi často aj hokejisti a lyžiari trpia úrazmi ramenného kĺbu. Môže však ísť aj o známky opotrebovania, resp. poškodenia niektorých svalových úponov, kĺbového puzdra, ale aj vnútrokĺbových štruktúr bez výraznejšieho úrazu. Tieto ťažkosti vznikajú stereotypným preťažovaním ramenného kĺbu. 
+                %p Špecifickým úrazom ramena je jeho luxácia vykĺbenie z kĺbovej jamky. Môžeme hovoriť o typickom zranení hokejistov, pretože pri opakovaných úrazoch na mantinel a pádoch na hornú končatinu dochádza ku vykĺbeniu ramenného kĺbu, ktoré si často vyžaduje akútnu repozíciu – vrátenie hlavice ramena do kĺbovej jamky. Pri tomto stave môže dôjsť ku poškodeniu stabilizujúcich vnútrokĺbnych štruktúr, čo vedie ku prejavom instability ramena. Prejavuje sa sklonom k opakovaným vykĺbeniam, ktoré sa objavujú čoraz častejšie pri pomerne jednoduchom pohybe ramena. Dnes je bežná artroskopická operácia indikovaná u vrcholových športovcov už po prvom úraze ramena.
+
+                %center
+                  %img{:src=>"images/sportovci.png"}
+
+                %h3 Liečba
+                %p Športová traumatológia zaznamenala v poslednej dekáde  výrazné zmeny vo filozofii a možnostiach liečby. Základom liečby "starými metódami" bolo sádrovanie kĺbu po úraze. Diagnostika bola limitovaná len na RTG vyšetrenie a klinické skúsenosti lekára. Otvorené operačné metódy pomocou "veľkých" operačných rán, dlhodobé pooperačné znehybnenie kĺbu  a niekoľkotýždňový pobyt v nemocnici viedli  často ku neuspokojivým výsledkom a obmedzeniu funkcie kĺbu. Rehabilitácia sa odporúčala pomerne neskoro a tak následky aj pomerne jednoduchých úrazov viedli ku koncu športovej kariéry.
+                %p Veľmi dôležitou častou liečebného reťazca je rehabilitácia, najmä pooperačných stavov. Rozcvičovanie kĺbov fyzioterapeutmi a aplikácia komplexnej elektroliečby, cryoterapie a laserterapie dnes neoddeliteľne patrí do algoritmu liečby.
+
+                %h3 Aké sú súčasné moderné trendy?
+                %ul
+                  %li Špecializácia lekárov - traumatológov a ortopédov na športové úrazy
+                  / %li Včasná diagnostika poškodenia kĺbu magnetickou rezonanciou
+                  %li Včasná konzervatívna alebo operačná liečba
+                  %li Znehybnenie kĺbu len v nevyhnutných prípadoch na čo najkratšiu dobu pomocou moderných snímateľných ortéz
+                  %li Akcelerovaná rehabilitácia za účelom zabránenia stuhnutia kĺbu a ochabnutiu svalstva
+                  %li Snaha o čo najskorší návrat do pohybu a športového zaťaženia
+
+        / %ul.nav.nav-pills.depart-rehab
+        /   %li.departures.active
+        /     %a{"data-toggle" => "pill", :href => "#departures"} Ortopédia
+        /   %li.rehab
+        /     %a{"data-toggle" => "pill", :href => "#rehab"} Športová traumatologia
+
+        / %hr.blue
+
+        / .tab-content
+        /   #departures.tab-pane.fade.in.active
+        /     .container
+        /       .row
+        /         .col-md-12
+        /           = haml :"modals/rehabs/sport"
+
+
+        /   #rehab.tab-pane.fade
+        /     = haml :"modals/rehabs/sport"
+
+
+
+      .modal-footer
+        %button.btn.btn-lg.btn-close{"data-dismiss" => "modal", :type => "button"} Zavrieť

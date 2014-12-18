@@ -1,4 +1,4 @@
-#userInfoModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+#userInfoModal.commonModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
   .modal-dialog
     .modal-content
       .modal-header
@@ -12,7 +12,7 @@
           %li.first.active
             %a{"data-toggle" => "pill", :href => "#drugs"} Produkty pre liečenie ortopedických onemocnení
           %li.second
-            %a{"data-toggle" => "pill", :href => "#insurance"} Taxi služby
+            %a{"data-toggle" => "pill", :href => "#taxi"} Taxi služby
 
         %hr.blue
 
@@ -21,7 +21,7 @@
           #drugs.tab-pane.fade.in.active
             = haml :"modals/partials/drugs"
 
-          #insurance.tab-pane.fade
+          #taxi.tab-pane.fade
             .container
               .row
                 .col-md-5.col-md-offset-1

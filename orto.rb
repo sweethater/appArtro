@@ -19,7 +19,7 @@ class Orto < Sinatra::Base
 
       RestClient.post api_key,
       :from => "#{params['email'].match(/^[^@]*/i).to_s} <#{params['email']}>",
-      :to => "ortotech@ortotech.sk",
+      :to => "petriscak@artropro.sk",
       :subject => "Feedback - #{params['name']}",
       :text => "Ošetrujúci lekár(ka): #{get_doctor(params['doctor'])} \n" \
                 "Spokojnosť s personálom : #{get_quality(params['quality'])} \n" \
@@ -41,13 +41,9 @@ class Orto < Sinatra::Base
   def get_doctor(index)
     case index
     when "1"
-      "MUDr. Čunderlíková"
+      "MUDr. Štefan Petriščák, PhD."
     when "2"
-      "MUDr. Hudec"
-    when "3"
-      "MUDr. Konderová"
-    when "4"
-      "MUDr. Kubišová"
+      "MUDr. Dalimír Jančovič"
     end
   end
 
@@ -61,8 +57,8 @@ class Orto < Sinatra::Base
       "Priemer"
     when "4"
       "Nespokojný"
-    when "5"
-      "Nadmieru nespokojný"
+    # when "5"
+    #   "Nadmieru nespokojný"
     end
   end
 

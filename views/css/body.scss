@@ -8,53 +8,38 @@
 		left: 495px;
 
 	}
-	#krk {
-top: 425px;
-left: 415px;
-	}
 	#rameno {
-top: 450px;
-left: 665px;
+		top: 450px;
+		left: 665px;
 
 	}
 	#laket {
-top: 675px;
-left: 690px;
+		top: 675px;
+		left: 690px;
 	}
 	#zapastie {
-top: 880px;
-left: 720px;
-	}
-	#chrbat {
-top: 615px;
-left: 500px;
+		top: 880px;
+		left: 720px;
 	}
 	#panva {
-top: 890px;
-left: 430px;
+		top: 890px;
+		left: 430px;
 	}
 	#koleno {
-top: 1230px;
-left: 440px;
-	}
-	#clenok {
-top: 1580px;
-left: 460px;
+		top: 1230px;
+		left: 440px;
 	}
 }
 
-#partModal-clenok,
 #partModal-koleno,
 #partModal-panva,
-#partModal-chrbat,
 #partModal-zapastie,
 #partModal-laket,
-#partModal-rameno,
-#partModal-krk {
+#partModal-rameno {
 	overflow-y:hidden;
 	font-family: rw-r;
 	.modal-dialog {
-		margin: 190px auto;
+		margin: 0px;
 
 		.modal-content {
 			background: rgba(0,0,0,0.75);
@@ -74,14 +59,11 @@ left: 460px;
 	}
 }
 
-#partModal-clenok,
 #partModal-koleno,
 #partModal-panva,
-#partModal-chrbat,
 #partModal-zapastie,
 #partModal-laket,
-#partModal-rameno,
-#partModal-krk  {
+#partModal-rameno {
 	.modal-body {
 	  padding-bottom: 0px;
 		.part {
@@ -130,7 +112,8 @@ left: 460px;
 		.part {
 			.main-info {
 				li a {
-					padding: 15px 70px !important;
+					padding: 15px 50px !important;
+					height: 70px;
 				}
 			}
 		}

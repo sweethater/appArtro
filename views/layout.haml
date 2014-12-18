@@ -12,9 +12,11 @@
     %link{:href => "/css/body.css", :rel => "stylesheet"}
     %link{:href => "/css/bootstrap-tabs.css", :rel => "stylesheet"}
     %link{:href => "/css/jsKeyboard.css", :rel => "stylesheet"}
-    %link{:href => "/css/video-js.min.css", :rel => "stylesheet"}
+    / %link{:href => "/css/video-js.min.css", :rel => "stylesheet"}
     %link{:href => "/css/mediaelementplayer.min.css", :rel => "stylesheet"}
     %link{:href => "/css/lightbox.css", :rel => "stylesheet"}
+    %link{:href => "/css/clock.css", :rel => "stylesheet"}
+    %link{:href => "/css/bootstrap-modal.css", :rel => "stylesheet"}
 
     %link{:href => "/images/favicon.png", :rel => "icon", :type => "image/png"}
 
@@ -26,68 +28,88 @@
     %script{:src => "/js/video.js", :type => "text/javascript"}
     %script{:src => "/js/mediaelement-and-player.min.js", :type => "text/javascript"}
     %script{:src => "/js/lightbox.js", :type => "text/javascript"}
+    %script{:src => "/js/bootstrap-modal.js", :type => "text/javascript"}
+    %script{:src => "/js/bootstrap-modalmanager.js", :type => "text/javascript"}
 
   %body
 
     #loader
-      %img.loader-logo{ :src=> "images/artropro-loader.png" }
+      %img.loader-logo{ :src=> "images/loader-logo.png" }
+      %img.loader-glow{ :src=> "images/loader-glow.png" }
+      %img.finger{ :src=> "images/loader-touch-rotate.png" }
+        .loader_pulse_rays
+        .loader_pulse_rays2
 
     #wrapper
       %video#bgvid{:preload=>"auto", :autoplay=>"true", :muted=>"muted", :volume=>"0"}
-        %source{:src => "/images/body-bg.mp4", :type => "video/mp4"}
-
+        %source{:src => "/images/body-video.webm", :type => "video/webm"}
+        
         / %source{:src => "/images/body.ogg", :type => "video/ogg"}
         / %source{:src => "/images/body.webm", :type => "video/webm"}
         / %source{:src => "/images/body.mp4", :type => "video/mp4"}
 
       = yield
 
-      #clock
-      #clock-icon
-        %img{ :src=>"images/clock.svg"}
+      #artropro-logo
+        %img{ :src=>"images/logo-glow.png"}
 
-      #ortotech-logo
-        %img{ :src=>"images/artropro-text.png"}
 
-      #ortotech-logo2
-        %img{ :src=>"images/artropro-logo.png"}
+      .clock
+        .numbers
+          %ul
+            %li 12
+            %li 3
+            %li 6
+            %li 9
+        .clockwise
+          .center
+          #analogsecond.hand-second
+          #analogminute.hand-minute
+          #analoghour.hand-hour
+        .calendar
+          %img.calendar{ :src=>"images/calendar-raw.png"}
+          .date
+            .month 
+            .year 
+            .day
+              .day-window 
 
-      #calendar
-      #calendar-icon
-        %img{ :src=>"images/calendar.svg"}
-      / #ortotech-man
-      /   %img{ :src=>"images/vitruvian-men.png"}
 
 
       #footer_navigation
         .first-line
-          %button.btn.btn-nav-lg.btn-lg.first{:type => "button", "data-target" => "#trafficModal", "data-toggle" => "modal"} Jednodňová chirurgia
-          %button.btn.btn-nav-lg.btn-lg.second{:type => "button", "data-target" => "#rehabModal", "data-toggle" => "modal"} 
+          %button.btn.btn-nav-lg.btn-lg{:type => "button", "data-target" => "#daysurgeryModal", "data-toggle" => "modal"} Jednodňová chirurgia
+          %button.btn.btn-nav.btn-lg.btn-nav-offset{:type => "button", "data-target" => "#ortopedyModal", "data-toggle" => "modal"} 
             Ortopédia
             %br
-            Športová traumatologia
+            Športová traumatológia
+          %button.btn.btn-nav.btn-lg.btn-nav-offset{:type => "button", "data-target" => "#advicesModal", "data-toggle" => "modal"} Praktické rady
         .second-line
-          %button.btn.btn-nav.btn-lg{:type => "button", "data-target" => "#ortotechModal", "data-toggle" => "modal"} O nás
+          %button.btn.btn-nav.btn-lg{:type => "button", "data-target" => "#artroproModal", "data-toggle" => "modal"} O nás
           %button.btn.btn-nav.btn-lg.btn-nav-offset{:type => "button", "data-target" => "#userInfoModal", "data-toggle" => "modal"} Informácie pre klientov
           %button.btn.btn-nav.btn-lg.btn-nav-offset{:type => "button", "data-target" => "#surveyModal", "data-toggle" => "modal"} Anketa pre pacientov
 
       = haml :"body/schema"
 
-      / = haml :"body/part-clenok"
       = haml :"body/part-koleno"
       = haml :"body/part-panva"
-      / = haml :"body/part-chrbat"
       = haml :"body/part-zapastie"
       = haml :"body/part-laket"
       = haml :"body/part-rameno"
-      = haml :"body/part-krk"
 
-      = haml :"modals/rehabs"
+      = haml :"modals/videos/operacia1"
+      = haml :"modals/videos/operacia2"
+      = haml :"modals/videos/operacia3"
+      = haml :"modals/videos/operacia4"
+      = haml :"modals/videos/operacia5"
+      = haml :"modals/videos/operacia6"
+
+      = haml :"modals/ortopedy"
       = haml :"modals/survey"
       = haml :"modals/user_info"
-      = haml :"modals/traffic"
-      / = haml :"modals/devices"
-      = haml :"modals/ortotech"
+      = haml :"modals/daysurgery"
+      = haml :"modals/advices"
+      = haml :"modals/artropro"
 
 
     #virtualKeyboard

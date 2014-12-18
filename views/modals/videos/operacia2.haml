@@ -1,0 +1,12 @@
+#video2Modal.video-modals.modal.fade{"data-focus-on"=>"input:first", :tabindex => "-1"}
+	.modal-dialog.video-modal-dialog
+		.modal-header
+			%button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+			%h2#myModalLabel.modal-title POŠKODENIE CHRUPAVIEK
+		.modal-body	
+			.video-layout
+				%video#operation-video2{:preload=>"auto", :width=>640, :height=>480, :controls=>""}
+					%source{:src => "/videos/poskodenie-chrupaviek.webm", :type => "video/webm"}
+
+		.modal-footer
+			%button.btn.btn-lg.btn-close{"data-dismiss" => "modal", :type => "button"} Zavrieť

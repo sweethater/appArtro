@@ -1,28 +1,80 @@
-$(document).ready(function() {
+var oClockAnalog = {
+    aSecond:         [],
+    dtDate:          new Date(),
+    iCurrSecond:     -1,
+    iHourRotation:   -1,
+    iMinuteRotation: -1,
+    iStepSize:       10,
+    iTimerAnimate:   setInterval("oClockAnalog.fAnimate()", 20),
+    iTimerUpdate:    setInterval("oClockAnalog.fUpdate()", 1000),
 
-  function displayTime() {
-    var currentTime = new Date();
+    fAnimate:       function() {
+        if (this.aSecond.length > 0) {
+            this.fRotate("analogsecond", this.aSecond[0]);
+            this.aSecond = this.aSecond.slice(1);
+        }
+    },
+    fGetHour:     function() {
+        var iHours = this.dtDate.getHours();
+        if (iHours > 11) {
+            iHours -= 12;
+        }
+        return Math.round((this.dtDate.getHours() * 30) + (this.dtDate.getMinutes() / 2) + (this.dtDate.getSeconds() / 120));
+    },
+    fGetMinute:     function() {
+        return Math.round((this.dtDate.getMinutes() * 6) + (this.dtDate.getSeconds() / 10));
+    },
+    fInit:          function() {
+        this.iHourRotation = this.fGetHour();
+        this.fRotate("analoghour", this.iHourRotation);
 
-    var hours = currentTime.getHours();
-    var minutes = currentTime.getMinutes();
-    // var seconds = currentTime.getSeconds();
+        this.iMinuteRotation = this.fGetMinute();
+        this.fRotate("analogminute", this.iMinuteRotation);
 
-  //   if (seconds < 10) {
-		//     seconds = "0" + seconds;
-		// }
+        this.iCurrSecond = this.dtDate.getSeconds();
+        this.fRotate("analogsecond", (6 * this.iCurrSecond));
+    },
+    fRotate:        function(sID, iDeg) {
+        var sCSS = ("rotate(" + iDeg + "deg)");
+        $("#" + sID).css({ '-moz-transform': sCSS, '-o-transform': sCSS, '-webkit-transform': sCSS });
+    },
+    fStepSize:     function(iTo, iFrom) {
+        var iAnimDiff = (iFrom - iTo);
+        if (iAnimDiff > 0) {
+            iAnimDiff -= 360;
+        }
+        return iAnimDiff / this.iStepSize;
+    },
+    fUpdate:        function() {
+        // update time
+        this.dtDate = new Date();
 
-    if (minutes < 10) {
-		    minutes = "0" + minutes;
-		}
+        // hours
+        var iTemp = this.fGetHour();
+        if (this.iHourRotation != iTemp) {
+            this.iHourRotation = iTemp;
+            this.fRotate("analoghour", iTemp);
+        }
 
-    if (hours < 10) {
-		    hours = "0" + hours;
-		}
+        // minutes
+        iTemp = this.fGetMinute();
+        if (this.iMinuteRotation != iTemp) {
+            this.iMinuteRotation = iTemp;
+            this.fRotate("analogminute", iTemp);
+        }
 
-    var clockDiv = document.getElementById('clock');
-    // clockDiv.innerText = hours + ":" + minutes + ":" + seconds;
-    clockDiv.innerText = hours + ":" + minutes ;
-  }
+        // seconds
+        if (this.iCurrSecond != this.dtDate.getSeconds()) {
+            var iRotateFrom = (6 * this.iCurrSecond);
+            this.iCurrSecond = this.dtDate.getSeconds();
+            var iRotateTo = (6 * this.iCurrSecond);
 
-	setInterval(displayTime, 1000);
-});
+            // push steps into array
+            var iDiff = this.fStepSize(iRotateTo, iRotateFrom);
+            for (var i = 0; i < this.iStepSize; i++) {
+                iRotateFrom -= iDiff;
+                this.aSecond.push(Math.round(iRotateFrom));
+            }
+        }
+    }
+};

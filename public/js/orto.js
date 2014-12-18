@@ -1,8 +1,9 @@
 idleTimer = null;
 idleState = false;
+loaderActive = true;
 
 // How much it will to take to close opened modal while user is idle
-idleWait = 50000;
+idleWait = 210000; // NASTAVIT NA 210000 = 3.5min
 
 bgPlaying = true;
 bodyModalVisible = true
@@ -11,27 +12,48 @@ $(window).load(function() {
 	// !!!!!!! ODKOMENTOVAT !!!!!!!
 	// !!!!!!! ODKOMENTOVAT !!!!!!!
 	// !!!!!!! ODKOMENTOVAT !!!!!!!
+
+	$('*').css({
+       'cursor' : 'url("../images/transparentCursor.cur"), auto'
+    });
+
 	hide_body_parts();
-	$("#loader").fadeOut("slow");
+	document.getElementById("bgvid").playbackRate = 2.0;
 	$('.mejs-controls').hide();
 });
 
 $(document).ready(function() {
 
+	$('*').css({
+       'cursor' : 'url("../images/transparentCursor.cur"), auto'
+    });
+
+	document.addEventListener("contextmenu", function(e) {
+	    e.preventDefault();
+	});
+
+	if ( loaderActive == true ) {
+		glowFadeIn();
+	}
+
+	$('#loader').on('click',function(){
+		$("#loader").fadeOut("slow");
+	})
+
 	$( "img" ).mousedown(function(){return false;});
 	$( "a" ).mousedown(function(){return false;});
 
-	var fullDate = new Date()
-	var twoDigitMonth = 0
+	var months = ["Január","Február","Marec","Apríl","Máj","Jún","Júl","August","September","Október","November","December"];
+	var date = new Date();
+	var month_int = date.getMonth();
+	var month = months[month_int];
+	var day_int = date.getDate();
+	var year_int = date.getFullYear();
 
-	if ( (fullDate.getMonth()+1) > 9 ) {
-		twoDigitMonth = ((fullDate.getMonth().length+1) === 1)? (fullDate.getMonth()+1) : (fullDate.getMonth()+1);
-	} else {
-		twoDigitMonth = ((fullDate.getMonth().length+1) === 1)? (fullDate.getMonth()+1) : '0' + (fullDate.getMonth()+1);
-	}
+	$('.calendar .month').text(month)
+	$('.calendar .year').text(year_int)
+	$('.calendar .day-window').text(day_int)
 
-	var currentDate = fullDate.getDate() + "." + twoDigitMonth + ".";
-	$('#calendar').text(currentDate)
 
 	$('.container .list-group-item').on('click',function(){
 		if ( $(this).hasClass("activ") ) {
@@ -63,23 +85,6 @@ $(document).ready(function() {
 		}
 	});
 
-  // $('form#survey input').keyup(function() {
-
-  //     var emailReg = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-  //     var email = $('form#survey input#mail').val();
-  //     var valid_email = emailReg.test(email);
-
-  //     var usernameReg = new RegExp(/^[a-zA-Z]+[\s]+[a-zA-Z]+/i);
-  //     var username = $('form#survey input#user-name').val();
-  //     var valid_username = usernameReg.test(username);
-
-  //     if ( valid_email && valid_username ) {
-  //     	$('button#submit').removeAttr('disabled');
-
-  //     } else {
-  //       $('button#submit').attr('disabled', 'disabled');
-  //     }
-  // });
 
 	$('#surveyModal.modal .btn-close').on('click',function(){
 		clearForm();
@@ -94,34 +99,23 @@ $(document).ready(function() {
 	});
 
 
-	// var player = new MediaElementPlayer('video#presentation-vid');
-
-	// $(".nav.nav-pills.ortotech .contacts, .nav.nav-pills.ortotech .about").on('click',function(){
-	// 	pause_video(player);
-	// });
-
-	// $('#ortotechModal').on('hidden.bs.modal',function(){
-	// 	stop_video(player);
-	// });
-
-	// $('#ortotechModal .close, #ortotechModal .btn-close').on('click',function(){
-	// 	stop_video(player);
-	// });
-
 	$("#bgvid").bind("ended", function() {
 		bgPlaying = false;
 
-		$("#krk").fadeIn(300);
-			$("#rameno").fadeIn(300,function(){
-		  		$("#laket").fadeIn(300,function(){
-		  			$("#panva").fadeIn(300);
-		  				$("#zapastie").fadeIn(300,function(){
-		  					$("#koleno").fadeIn(300,function(){
-									hideBodyModal();
-		  					});
-		  				});
-					});
-				});
+
+		fadein_body_parts();
+		hideBodyModal();
+		// $("#krk").fadeIn(300);
+		// 	$("#rameno").fadeIn(300,function(){
+		//   		$("#laket").fadeIn(300,function(){
+		//   			$("#panva").fadeIn(300);
+		//   				$("#zapastie").fadeIn(300,function(){
+		//   					$("#koleno").fadeIn(300,function(){
+		// 							hideBodyModal();
+		//   					});
+		//   				});
+		// 			});
+		// 		});
 	});
 
 	$('.body-part').on('click',function(){
@@ -130,10 +124,18 @@ $(document).ready(function() {
 		showBodyModal();
 	});
 
-
-	$('#partModal-clenok').on('hidden.bs.modal',function(){
-		hideBodyModal();
+	$('.play-video').on('click',function(){
+		var modal_name = $(this).attr("modal_src");
+		var video_name = $(this).attr("video_src");
+		player = new MediaElementPlayer(video_name);
+		$(modal_name).modal('show');
 	});
+
+	$('.video-modals').on('hide',function(){
+		stop_video(player);
+	});
+
+
 
 	$('#partModal-koleno').on('hidden.bs.modal',function(){
 		hideBodyModal();
@@ -155,34 +157,23 @@ $(document).ready(function() {
 		hideBodyModal();
 	});
 
-	$('#partModal-chrbat').on('hidden.bs.modal',function(){
-		hideBodyModal();
-	});
 
-	$('#partModal-krk').on('hidden.bs.modal',function(){
-		hideBodyModal();
-	});
-
-	// $('#trafficModal').on('hidden.bs.modal',function(){
-	// 	$(this).find('.traffic-info > li.active').removeClass('active').removeClass('in');;
-	// 	$(this).find('.tab-content > .active').removeClass('active').removeClass('in');
-	// 	$(this).find('.nav-global > li.active').removeClass('active');
-
-	// 	$(this).find('.traffic-info > li.first').addClass('active');
-	// 	$(this).find('.tab-content > #bus').addClass('active').addClass('in');
-	// 	$(this).find('.nav-global > li:first').addClass('active');
-	// 	$(this).find('#bus1').addClass('active').addClass('in');
-	// });
-
-
-	$('#ortotechModal').on('hidden.bs.modal',function(){
-		$(this).find('.nav-pills.ortotech > li.active').removeClass('active');
+	$('.bodyPartModal').on('hidden.bs.modal',function(){
+		$(this).find('.nav-pills > li.active').removeClass('active');
 		$(this).find('.tab-content > .active').removeClass('active').removeClass('in');
 
-		$(this).find('.nav-pills.ortotech > li.about').addClass('active');
-		$(this).find('.tab-content > #about').addClass('active').addClass('in');
+		$(this).find('.nav-pills > li:first').addClass('active');
+		$(this).find('.tab-content > .tab-pane:first').addClass('active').addClass('in');
 	});
 
+	$('.commonModal').on('hide',function(){
+		$(this).find('.nav-pills > li.active').removeClass('active');
+		$(this).find('.tab-content > .active').removeClass('active').removeClass('in');
+
+		$(this).find('.nav-pills > li:first').addClass('active');
+		$(this).find('.tab-content > .tab-pane:first').addClass('active').addClass('in');
+	});
+	
 
 	// $('*').bind('click', function () {
 	$('*').bind('mousemove keydown scroll click', function () {
@@ -203,11 +194,16 @@ $(document).ready(function() {
         // stop_video(player)
         jsKeyboard.hide();
         $('.close').click();
+        $("#loader").fadeIn("slow");
         idleState = true;
 	      }, idleWait);
 	});
 
   	$("body").trigger("mousemove");
+
+  	$(".survey-close-btn").on('click',function(){
+  		jsKeyboard.hide();
+  	});
 
 	$(function () {
        jsKeyboard.init("virtualKeyboard");
@@ -255,7 +251,6 @@ function hide_body_parts(){
 	$("#panva").hide();
 	$("#zapastie").hide();
 	$("#koleno").hide();
-	$("#clenok").hide();
 }
 
 function fadeout_body_parts(){
@@ -267,27 +262,37 @@ function fadeout_body_parts(){
 	$("#panva").fadeOut(300);
 	$("#zapastie").fadeOut(300);
 	$("#koleno").fadeOut(300);
-	$("#clenok").fadeOut(300);
 }
 
 function fadein_body_parts(){
 	// $("#lebka").fadeIn(300);
 	$("#krk").fadeIn(300);
-	$("#rameno").fadeIn(600);
+	$("#rameno").fadeIn(300);
 	// $("#chrbat").fadeIn(300);
-	$("#laket").fadeIn(1200);
-	$("#panva").fadeIn(1500);
-	$("#zapastie").fadeIn(1800);
-	$("#koleno").fadeIn(2100);
-	$("#clenok").fadeIn(2400);
+	$("#laket").fadeIn(300);
+	$("#panva").fadeIn(300);
+	$("#zapastie").fadeIn(300);
+	$("#koleno").fadeIn(300);
 }
 
+function glowFadeIn(){
+	$(".loader-glow").fadeIn(2000,function(){
+		glowFadeOut();
+	})
+}
+
+function glowFadeOut(){
+	$(".loader-glow").fadeOut(1000,function(){
+		glowFadeIn();
+	})
+}
 
 // function pause_video(player){
 // 	player.pause();
 // }
 
-// function stop_video(player){
-// 	player.pause();
-// 	player.setCurrentTime(0);
-// }
+function stop_video(player){
+	player.pause();
+	player.setCurrentTime(0);
+}
+

@@ -1,4 +1,4 @@
-#partModal-laket.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+#partModal-laket.bodyPartModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
   .modal-dialog
     .modal-content
       .modal-header
@@ -10,8 +10,8 @@
             %ul.nav.nav-pills
               %li.nav.first.active
                 %a{"data-toggle" => "pill", :href => "#laket1"} Laket
-              %li.nav
-                %a{"data-toggle" => "pill", :href => "#laket2"} Vyvrtnutý lakeť
+              / %li.nav
+              /   %a{"data-toggle" => "pill", :href => "#laket2"} Vyvrtnutý lakeť
               %li.nav
                 %a{"data-toggle" => "pill", :href => "#laket3"} Tenisový lakeť
             %hr.blue
@@ -33,36 +33,42 @@
 
                       %p.text Žily v lakťovej jamke (vena cephalica) sú najčastejším miestom na odobranie vzorky krvi alebo sa používajú pri intravenóznom (vnútrožilovom) podávaní liekov. Ku kĺbovej jamke sa tiež prikladá stetoskop (krátky fonendoskop) na meranie krvného tlaku – dochádza tu ku zdvojeniu tepien – bifurkácii. Veľmi často tiež dochádza k vytknutiu, poraneniu mäkkých častí zhybu (distorzia) alebo vykĺbeniu (luxácia) lakťového kĺbu. Po luxácii je nutné urobiť nápravu – vrátenie kĺbu do kĺbovej jamky (repozicia).
 
-              #laket2.tab-pane.fade
-                .container
-                  .row
-                    .col-md-12.body-paddding-justify
-                      %img.body-right{:src=>"images/body/laket-luxacia.png"}
-                      %p.text Pri vyvrtnutí (luxácii) docháza k posunutiu kĺbových koncov voči sobe navzájom. Toto posunutie môže byť takého stupňa, že kĺbové konce sa seba nedotýkajú (luxácia úplná) alebo sú kĺbové konce ešte v čiastočnom dotyku (subluxácia).
-                      %ul
-                        %li Diagnostický výkony
-                        %li Liečebný výkony
-                        %li Operačný výkony
+                      %img.body-right{:src=>"images/body/laket-anatomia.png"}
 
-                      %h3.big Príčiny
-                      %p K luxácii lakťa najčastejšie dochádza pôsobením nepriameho mechanizmu – pádom na extendovanú hornú končatinu natiahnutú v lakti. Pri čistej luxácii sa jedná vždy o luxáciu zadnú (dorzálna) bez poranania kolaterálnych väzov, je roztrhnuté len predné kĺbové puzdro. * Traumatická – postihnutý je doteraz zdravý kĺb a jednoznačnou príčinou je úraz. * Patologická – príčinou sú niektoré choroby kĺbu, jeho puzdra, kostných koncov (osteomyelitis) alebo choroby nervové, ako sú obrny. * Vrodené – kongenitálna luxácia.
+                      %p Najčastejšou diagnózou pacientov trpiacich bolesťami lakťového kĺbu je laterálna epikondylitída, známa pod názvom tenisový lakeť. Postihuje športovcov, ale aj nešportovcov, ktorí svojou aktivitou nadmerne zaťažia svaly predlaktia. Šetrenie kĺbu, vhodná ortéza a fyzikálna liečba sú vo väčšine prípadoch kľúčmi k úspešnej liečbe. Pokiaľ však bolesti pretrvávajú viac než 6-12 mesiacov je vhodná operačná liečba. Pred operáciou je potrebná podrobná diagnostika lakťového kĺbu vrátane RTG.
 
-                      %h3 Diagnostika
-                      %p Základom vyšetrenia je dôkladná anamnéza. Dôležité sú i okolnosti a mechanismus luxácie. Následuje objektívne vyšetrenie stability postihnutého kĺbu. Pacient udáva výraznú bolestivosť a obmedzenú ohybnosť poraneného kĺbu. Vždy je nutné vyšetriť periférny obeh a nervové zásobenie postihnutej končatiny (zvlášť nervus medianus a radialis). Následne sa zhotovia röntgenové snímky vo dvoch projekciach na vylúčenie luxačnej zlomeniny.
+                      %p Nepodceňujte dlhotrvajúce bolesti lakťa. Včasnou liečbou možno predísť operačnej liečbe.
 
-                      %h3 Terapia
-                      %p Pri lokálnom znecitlivení sa vykoná uzavretá náprava ťahom a šetrným prevedením do flexie. Po repozícii sa musí skontrolovať stabilita kĺbu. Poranená končatina sa musí znehybniť sadrovou fixáciou v pravouhlom supinačnom postavení asi na tri týždne. Potom se ešte vykonáva nový rtg snímok ku kontrole postavenia a pripadného poranenia kostí. Po odstránení sadrovej fixácie následuje včasná rehabilitáce, ktorá je zameraná na obnovenie hybnosti lakťového kĺbu.
+              / #laket2.tab-pane.fade
+              /   .container
+              /     .row
+              /       .col-md-12.body-paddding-justify
+              /         %img.body-right{:src=>"images/body/laket-luxacia.png"}
+              /         %p.text Pri vyvrtnutí (luxácii) docháza k posunutiu kĺbových koncov voči sobe navzájom. Toto posunutie môže byť takého stupňa, že kĺbové konce sa seba nedotýkajú (luxácia úplná) alebo sú kĺbové konce ešte v čiastočnom dotyku (subluxácia).
+              /         %ul
+              /           %li Diagnostický výkony
+              /           %li Liečebný výkony
+              /           %li Operačný výkony
 
-                      %h3 Komplikace
-                      %p Najzávažnějšiou neskoršou komplikáciou po luxáciach je tzv. habituálna luxácia – pri nej po prvnom úraze dôjde k nezhojenému poškozeniu kĺbového puzdra, ktorá spôsobí, že luxácia sa po kratšom či dlhšom časovom úseku môže opakovať, dôjde k recidívam, pričom vyvolávajúce násilie pri každej ďalšej luxácii je neprimerane malé, pri inak zdravom kĺbe by nemohlo luxáciu vyvolať. Liečenie tohto stavu je možné iba operatívne.
-                      %ul
-                        %li luxácia + fraktúra (prípadne fraktúra s odlomením výbežku ulnaris nebo radialis)
-                        %li poranenie radiálneho nervu
-                        %li prípadné pretrvávajúce obmedzenie pohybu
-                        %li zvápenatenie v oblasti kľbu (periartikulárna kalcifikacia) a kostnatenie (osifikacia).
+              /         %h3.big Príčiny
+              /         %p K luxácii lakťa najčastejšie dochádza pôsobením nepriameho mechanizmu – pádom na extendovanú hornú končatinu natiahnutú v lakti. Pri čistej luxácii sa jedná vždy o luxáciu zadnú (dorzálna) bez poranania kolaterálnych väzov, je roztrhnuté len predné kĺbové puzdro. * Traumatická – postihnutý je doteraz zdravý kĺb a jednoznačnou príčinou je úraz. * Patologická – príčinou sú niektoré choroby kĺbu, jeho puzdra, kostných koncov (osteomyelitis) alebo choroby nervové, ako sú obrny. * Vrodené – kongenitálna luxácia.
 
-                      %h3 Prognóza
-                      %p Vätšinou býva veľmi dobrá. Opakujúce sa (recidivujúce) luxácie sú výnimočné, ich riešenie patrí na špecializované pracoviská.
+              /         %h3 Diagnostika
+              /         %p Základom vyšetrenia je dôkladná anamnéza. Dôležité sú i okolnosti a mechanismus luxácie. Následuje objektívne vyšetrenie stability postihnutého kĺbu. Pacient udáva výraznú bolestivosť a obmedzenú ohybnosť poraneného kĺbu. Vždy je nutné vyšetriť periférny obeh a nervové zásobenie postihnutej končatiny (zvlášť nervus medianus a radialis). Následne sa zhotovia röntgenové snímky vo dvoch projekciach na vylúčenie luxačnej zlomeniny.
+
+              /         %h3 Terapia
+              /         %p Pri lokálnom znecitlivení sa vykoná uzavretá náprava ťahom a šetrným prevedením do flexie. Po repozícii sa musí skontrolovať stabilita kĺbu. Poranená končatina sa musí znehybniť sadrovou fixáciou v pravouhlom supinačnom postavení asi na tri týždne. Potom se ešte vykonáva nový rtg snímok ku kontrole postavenia a pripadného poranenia kostí. Po odstránení sadrovej fixácie následuje včasná rehabilitáce, ktorá je zameraná na obnovenie hybnosti lakťového kĺbu.
+
+              /         %h3 Komplikace
+              /         %p Najzávažnějšiou neskoršou komplikáciou po luxáciach je tzv. habituálna luxácia – pri nej po prvnom úraze dôjde k nezhojenému poškozeniu kĺbového puzdra, ktorá spôsobí, že luxácia sa po kratšom či dlhšom časovom úseku môže opakovať, dôjde k recidívam, pričom vyvolávajúce násilie pri každej ďalšej luxácii je neprimerane malé, pri inak zdravom kĺbe by nemohlo luxáciu vyvolať. Liečenie tohto stavu je možné iba operatívne.
+              /         %ul
+              /           %li luxácia + fraktúra (prípadne fraktúra s odlomením výbežku ulnaris nebo radialis)
+              /           %li poranenie radiálneho nervu
+              /           %li prípadné pretrvávajúce obmedzenie pohybu
+              /           %li zvápenatenie v oblasti kľbu (periartikulárna kalcifikacia) a kostnatenie (osifikacia).
+
+              /         %h3 Prognóza
+              /         %p Vätšinou býva veľmi dobrá. Opakujúce sa (recidivujúce) luxácie sú výnimočné, ich riešenie patrí na špecializované pracoviská.
 
 
               #laket3.tab-pane.fade
@@ -71,6 +77,7 @@
                     .col-md-12.body-paddding-justify
                       %img.body-right{:src=>"images/body/laket-tenisovy.png"}
                       %p.text Tenisový lakeť (lat. laterálna epikondylitída) je bolestivý stav vonkajšej strany lakťového kĺbu. Táto typická bolesť je spôsobená zápalovou reakciou úponu šliach svalov predlaktia, ktoré ohýbajú zápästie a ruku smerom nahor (extenzory). Epikondyl je kostný výbežok ramennej kosti, ktorý sa dá dobre nahmatať na vonkajšej aj vnútornej strane lakťa. Na toto miesto sa upínajú svaly predlaktia.
+                      %p Obdobov tenisového lakťa je menej častý golfový lakeť (mediálna epikondylitída), ktorý postihuje úpony na vnútornej strane lakťa, tzv. ohýbače.
 
                       %h3 Príčiny vzniku a u koho najčastejšie vzniká?
                       %p Trápi tenistov najmä pri backhandovom údere. Príčinou vzniku je nepravidelné nárazové hranie, zlé technické zvládnutie Paradoxne veľmi často vzniká u nešportovcov po rôznej opakovanej aktivite, ktorá nadmerne zaťaží svaly predlaktia /maľovanie bytu, skladanie nábytku alebo strihanie stromov/. Niekedy je počiatočným momentom bežné udretie vonkajšej časti lakťa o stenu alebo o zárubňu dverí. Takto vzniká pomliaždenie a natrhnutie úponu šliach predlaktia s následnou obrannou zápalovou reakciou a bolestivým syndrómom. Tenisový lakeť môže vzniknúť v každom veku, ale najčastejšie trápi skupinu ľudí vo veku 35­-50 rokov. Postihuje rovnako obe pohlavia.

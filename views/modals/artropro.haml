@@ -1,0 +1,160 @@
+#artroproModal.commonModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+        %h2#myModalLabel.modal-title ARTRO-Pro
+      .modal-body
+        %ul.nav.nav-pills.ortotech
+          %li.about.active
+            %a{"data-toggle" => "pill", :href => "#about"} O nás
+          / %li.videos
+          /   %a{"data-toggle" => "pill", :href => "#videos"} Edumed
+          %li.contacts
+            %a{"data-toggle" => "pill", :href => "#contacts"} Kontakty
+
+        %hr.blue
+
+        .tab-content
+          #about.tab-pane.fade.in.active
+            %center
+              %img{:src=>"images/body/header.png"}
+            .container.about
+              .row
+                .col-md-12
+                  %p Vitajte v spoločnosti ARTRO-Pro. ArtroPro je neštátne zdravotnícke zariadenie zamerané na diagnostiku a liečbu ochorení a úrazov pohybového aparátu. ArtroPro má dve ortopedické ambulancie a operačnú sálu s potrebným zázemím na poskytovanie jednodňovej chirurgie. 
+
+                  %center
+                    %a.about-1{"data-lightbox" => "about-1", "data-title" => "", :href => "images/about/3.jpg"}
+                      %img.img-thumbnail{:src=>"images/about/3s.jpg"}
+                    %a.about-2{"data-lightbox" => "about-1", "data-title" => "", :href => "images/about/4.jpg"}
+                      %img.img-thumbnail{:src=>"images/about/4s.jpg"}
+                    %a.about-3{"data-lightbox" => "about-1", "data-title" => "", :href => "images/about/7.jpg"}
+                      %img.img-thumbnail{:src=>"images/about/7s.jpg"}
+                    %a.about-4{"data-lightbox" => "about-1", "data-title" => "", :href => "images/about/8.jpg"}
+                      %img.img-thumbnail{:src=>"images/about/8s.jpg"}
+
+                  %p Ortopedická ambulancia je umiestnená v priestoroch na adrese Čsl. armády 10B, v Martine. Odborným garantom tejto ambulancie je MUDr. Štefan Petriščák, PhD. Ambulancia slúži k liečbe pacientov s ortopedickými ochoreniami a úrazmi pohybového aparátu s dôrazom na indikáciu k operačným zákrokom na pohybovom aparáte. Sú to úrazy u športovcov, vrcholových športovcov ale aj ľudí pri rekreačnom športovaní a pacientov s degeneratívnymi ochoreniami pohybového aparátu. Tieto operačné zákroky sa robia v rámci jednodňovej chirurgie na veľmi modernom operačnom sále, ktorý je súčasťou novovybudovaného objektu na ulici Čsl. armády 10B v Martine. Sú prevažne artroskopické.
+
+                  %h2 Ordinujúci lekári
+
+                  .bs-callout.bs-callout-info.height
+                    %h3.padding-top-10 MUDr. Štefan Petriščák, PhD.
+                    %img.photo.padding-down-15.padding-right-15{:src=>"images/petriscak.png"}
+                    %p.about-doctor.padding-right-30 MUDr. Štefan Petriščák, PhD. je ortopéd s praxou v obore od roku 1984, ktorý sa vzdelával na popredných európskych klinikách v Bazileji, Insbrucku a Viedni. Pracoval 24 rokov na Ortopedicko – traumatologickej klinike JLFUK v Martinskej fakultnej nemocnici. Od roku 1988 má odbornú prax v artroskopii a urobil niekoľko tisíc operácií artroskopických i otvorených na pohybovom aparáte. Úzko sa špecializuje na komplexnú chirurgiu ramena. Zúčastnil sa mnohých odborných kurzov a kongresov v Európe a USA a je členom viacerých odborných spoločností. Okrem iného je aj lekárom štátnej reprezentácie Slovenska v motocyklových športoch a členom Lekárskej komisie pri Svetovej motocyklovej federácii – FIM.
+
+                  .bs-callout.bs-callout-info.height
+                    %h3.padding-top-10 MUDr. Dalimír Jančovič
+                    %img.photo.padding-down-15.padding-right-15{:src=>"images/jancovic.png"}
+                    %p.about-doctor.padding-right-30 MUDr. Dalimír Jančovič je ortopéd, ktorý ukončil štúdium na Jeseniovej fakulte v Martine a prax ortopéda začal v roku 1980 na Ortopedicko – traumatologickej klinike JLFUK v Martinskej fakultnej nemocnici. Postupne sa začal špecializovať na artroskopické operácie, počas svojej praxe absolvoval množstvo študijných pobytov na známych pracoviskách po celom svete. Dva roky pracoval ako športový traumatológ na športovej klinike v Dubaji. Dvanásť rokov pôsobil ako lekár Slovenskej hokejovej reprezentácie, s ktorou získal 4 medaily na majstrovstvách sveta. Ako lekár výpravy sa zúčastnil aj troch zimných olympijských hier. V súčasnosti je členom zdravotnej komisie medzinárodnej hokejovej federácie IIHF, v rámci tohto pôsobenia sa zúčastňuje majstrovstiev sveta ako lekársky supervízor.
+                      
+
+          #contacts.tab-pane.fade
+            %center
+              / %h2 Organizačný prehľad pracovíska
+              %h2 ARTRO-Pro
+            %hr.blue
+            .container.contacts
+              .row
+                .col-md-10.col-md-offset-1
+
+                  .section
+                    %center
+                      %h2.padding-down-15 Ortopedické ambulancie
+                    %ul.list
+                      %li
+                        .name MUDr. Štefan Petriščák, PhD.
+                        .phone 043/4297055, 0917 499 700
+                      %li
+                        .name MUDr. Dalimír Jančovič
+                        .phone 043/4297055, 0917 499 700
+                  / %hr.blue
+
+                  / .section
+                  /   .name.big Rehabilitačná ambulancia
+                  /   %ul.list
+                  /     %li
+                  /       .name RHB + masér
+                  /       .phone 048/4729 715
+
+            %hr.blue
+            .row
+              .col-md-10.col-md-offset-1
+                %center 
+                  %h2.padding-down-15 Ordinačné hodiny
+            .row
+              .col-md-5.col-md-offset-1
+                %h3.doctor_name MUDr. Štefan Petriščák, PhD.
+                %table.table.work-hours
+                  %tbody
+                    %tr
+                      %td Pondelok
+                      %td Operačný deň
+                    %tr
+                      %td Útorok
+                      %td Ambulancia 8:00 - 15:30
+                    %tr
+                      %td Streda
+                      %td Operačný deň
+                    %tr
+                      %td Štvrtok
+                      %td Ambulancia 8:00 - 15:30
+                    %tr
+                      %td Piatok
+                      %td Ambulancia 8:00 - 15:30
+
+              .col-md-5
+                %h3.doctor_name MUDr. Dalimír Jančovič
+                %table.table.work-hours
+                  %tbody
+                    %tr
+                      %td Pondelok
+                      %td Ambulancia 8:00 - 12:00
+                    %tr
+                      %td Streda
+                      %td Ambulancia 8:00 - 12:00
+                    %tr
+                      %td Štvrtok
+                      %td Operačný deň
+
+            %hr.blue
+            .row
+              .col-md-4.col-md-offset-4
+                %center
+                  %h1 Adresa
+            .row
+              .col-md-6.col-md-offset-3
+                %center.main-adress
+                  %h2.main Firma   ARTRO-Pro:
+                  %h3.name 
+                  %h3.street Československej armády 10 B
+                  %h3.city 036 01 Martin
+                  %hr.blue
+                  %h2 Ordinuje:
+                  %h3 MUDr. Štefan Petriščák, PhD.
+                  %h3 MUDr. Dalimír Jankočovič
+
+
+
+            / .row
+            /   .col-md-6
+            /     %center.main-contacts
+            /       %h2.main Kontakt
+            /       %h3.phone Tel: 048/4729 711
+            /       %h3.fax Fax: 048/4729 797
+            /       %h3.mail Mail: ortotech@ortotech.sk
+
+            /   .col-md-6
+            /     %center.main-adress
+            /       %h2.main Adresa
+            /       %h3.name Ortotech, spol. s.r.o.
+            /       %h3.street Nám. L. Svobodu č.1
+            /       %h3.city 975 17 Banská Bystrica
+
+
+
+
+
+
+      .modal-footer
+        %button.btn.btn-lg.btn-close{"data-dismiss" => "modal", :type => "button"} Zavrieť
