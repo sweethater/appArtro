@@ -205,6 +205,10 @@ $(document).ready(function() {
   		jsKeyboard.hide();
   	});
 
+	$('#surveyModal button.close').on('click',function(){
+		jsKeyboard.hide();
+	});
+
 	$(function () {
        jsKeyboard.init("virtualKeyboard");
        $("#feedback").val();
