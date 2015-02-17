@@ -1,6 +1,5 @@
 idleTimer = null;
 idleState = false;
-loaderActive = true;
 
 // How much it will to take to close opened modal while user is idle
 idleWait = 210000; // NASTAVIT NA 210000 = 3.5min
@@ -16,9 +15,9 @@ $(window).load(function() {
 	$('*').css({
        'cursor' : 'url("../images/transparentCursor.cur"), auto'
     });
-
+	$("#loader").fadeOut("slow");
 	hide_body_parts();
-	document.getElementById("bgvid").playbackRate = 2.0;
+	document.getElementById("bgvid").playbackRate = 1.5;
 	$('.mejs-controls').hide();
 });
 
@@ -31,14 +30,6 @@ $(document).ready(function() {
 	document.addEventListener("contextmenu", function(e) {
 	    e.preventDefault();
 	});
-
-	if ( loaderActive == true ) {
-		glowFadeIn();
-	}
-
-	$('#loader').on('click',function(){
-		$("#loader").fadeOut("slow");
-	})
 
 	$( "img" ).mousedown(function(){return false;});
 	$( "a" ).mousedown(function(){return false;});
@@ -194,7 +185,6 @@ $(document).ready(function() {
         // stop_video(player)
         jsKeyboard.hide();
         $('.close').click();
-        $("#loader").fadeIn("slow");
         idleState = true;
 	      }, idleWait);
 	});
@@ -277,18 +267,6 @@ function fadein_body_parts(){
 	$("#panva").fadeIn(300);
 	$("#zapastie").fadeIn(300);
 	$("#koleno").fadeIn(300);
-}
-
-function glowFadeIn(){
-	$(".loader-glow").fadeIn(2000,function(){
-		glowFadeOut();
-	})
-}
-
-function glowFadeOut(){
-	$(".loader-glow").fadeOut(1000,function(){
-		glowFadeIn();
-	})
 }
 
 // function pause_video(player){
