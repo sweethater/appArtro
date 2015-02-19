@@ -28,11 +28,11 @@ class Orto < Sinatra::Base
     rescue => e
       File.open('/tmp/kiosk.log','a+') {|f| f.write("#{e} \n\n\n")}
 
-      RestClient.post api_key,
-      :from => "#{params['email'].match(/^[^@]*/i).to_s} <#{params['email']}>",
-      :to => "htmtrade2@gmail.com",
-      :subject => "Ortotech - Panel exception",
-      :text => "#{e} \n\n Params: #{params}"
+      # RestClient.post api_key,
+      # :from => "#{params['email'].match(/^[^@]*/i).to_s} <#{params['email']}>",
+      # :to => "htmtrade2@gmail.com",
+      # :subject => "Ortotech - Panel exception",
+      # :text => "#{e} \n\n Params: #{params}"
     end
 
     redirect '/'
