@@ -181,6 +181,19 @@
 	.panel-collapse .inner-text {
 		font-weight: bolder;
 	}
+	#wifi-taxi {
+		.display-inline > div {
+			display: inline-block;
+			font-size: 32px;
+		}
+		#wifi-connection {
+			padding-top: 40px;
+			padding-bottom: 15px;
+		}
+		#condition {
+			padding-bottom: 40px;
+		}
+	}
 }
 
 #daysurgeryModal {

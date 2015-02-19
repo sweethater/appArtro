@@ -31,6 +31,10 @@ $(document).ready(function() {
 	    e.preventDefault();
 	});
 
+	$('#show-pw-btn').on('click', function(){
+		show_pw();
+	});
+
 	$( "img" ).mousedown(function(){return false;});
 	$( "a" ).mousedown(function(){return false;});
 
@@ -74,6 +78,10 @@ $(document).ready(function() {
 				$(this).fadeIn(300);
 			});
 		}
+	});
+
+	$('#userInfoModal .btn-close, #userInfoModal button.close').on('click',function(){
+		hide_pw();
 	});
 
 
@@ -181,9 +189,10 @@ $(document).ready(function() {
 
       idleTimer = setTimeout(function () {
           // Idle event
-        console.log("You've been idle for 20 sec.");
+        console.log("You've been idle for 210 sec.");
         // stop_video(player)
         jsKeyboard.hide();
+        hide_pw();
         $('.close').click();
         idleState = true;
 	      }, idleWait);
@@ -276,5 +285,13 @@ function fadein_body_parts(){
 function stop_video(player){
 	player.pause();
 	player.setCurrentTime(0);
+}
+
+function show_pw(){
+	$('#wifi-connection #password').text("inocode5")
+}
+
+function hide_pw(){
+	$('#wifi-connection #password').text("********")
 }
 

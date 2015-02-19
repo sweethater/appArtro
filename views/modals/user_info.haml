@@ -12,7 +12,7 @@
           %li.first.active
             %a{"data-toggle" => "pill", :href => "#drugs"} Produkty pre liečenie ortopedických ochorení
           %li.second
-            %a{"data-toggle" => "pill", :href => "#taxi"} Taxi služby
+            %a{"data-toggle" => "pill", :href => "#wifi-taxi"} Nadštandardné služby
 
         %hr.blue
 
@@ -21,8 +21,37 @@
           #drugs.tab-pane.fade.in.active
             = haml :"modals/partials/drugs"
 
-          #taxi.tab-pane.fade
+          #wifi-taxi.tab-pane.fade
             .container
+              .row
+                .col-md-6.col-md-offset-3
+                  %center
+                    %h2 Wifi pripojenie
+              .row#wifi-connection
+                .col-md-5.col-md-offset-1
+                  .display-inline
+                    .title Názov:
+                    .space &nbsp
+                    .name artropro
+                  .display-inline
+                    .title Heslo:
+                    .space &nbsp&nbsp
+                    .name#password ********
+                    / .name &nbsp&nbsp inocode5
+                .col-md-5
+                  %button.btn.btn-pw.btn-lg#show-pw-btn Zobraziť heslo*
+              .row#condition
+                .col-md-10.col-md-offset-1
+                  %center
+                    %h3 * Kliknutím na tlačidlo "Zobraziť heslo", pacient súhlasí s zaúčtovaním sumy 10€ za účelom poskytnutia nadštandardné služby vo forme internetového pripojenia.
+
+            %hr.blue
+
+            .container
+              .row
+                .col-md-6.col-md-offset-3
+                  %center
+                    %h2 Zaobstaranie taxi služby
               .row
                 .col-md-5.col-md-offset-1
                   .column1
@@ -107,6 +136,10 @@
                           0908 108 108
                       %br
 
+              .row
+                .col-md-10.col-md-offset-1
+                  %center
+                    %h3 Na pacientovo vyžiadanie bude k jeho odvoz zaobstaraná taxi služba, ktorá mu bude k dispozícií po vykonaní procedúry. Táto služba bude pacientovy zaúčtovaná sumou 10€ za účelom poskytnutia nadštandardné služby.
 
 
 
