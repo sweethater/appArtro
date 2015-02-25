@@ -35,6 +35,11 @@
 
     #loader
       %img.loader-logo{ :src=> "images/loader-logo.png" }
+      %img.loader-glow{ :src=> "images/loader-glow.png" }
+      %img.finger{ :src=> "images/loader-touch-rotate.png" }
+      #pulsing_text DOTKNI SA PRE INFORMÁCIE
+    /     .loader_pulse_rays
+    /     .loader_pulse_rays2
 
     #wrapper
       %video#bgvid{:preload=>"auto", :autoplay=>"true", :muted=>"muted", :volume=>"0"}
@@ -82,7 +87,10 @@
           %button.btn.btn-nav.btn-lg.btn-nav-offset{:type => "button", "data-target" => "#advicesModal", "data-toggle" => "modal"} Praktické rady
         .second-line
           %button.btn.btn-nav.btn-lg{:type => "button", "data-target" => "#artroproModal", "data-toggle" => "modal"} O nás
-          %button.btn.btn-nav.btn-lg.btn-nav-offset{:type => "button", "data-target" => "#userInfoModal", "data-toggle" => "modal"} Informácie pre klientov
+          %button.btn.btn-nav.btn-lg.btn-nav-offset{:type => "button", "data-target" => "#userInfoModal", "data-toggle" => "modal"}
+            Nadštandardné služby
+            %br
+            Informácie o liečivách
           %button.btn.btn-nav.btn-lg.btn-nav-offset{:type => "button", "data-target" => "#surveyModal", "data-toggle" => "modal"} Anketa pre pacientov
 
       = haml :"body/schema"

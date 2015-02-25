@@ -1,4 +1,4 @@
-#userInfoModal.commonModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+#userInfoModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
   .modal-dialog
     .modal-content
       .modal-header
@@ -9,19 +9,19 @@
 
 
         %ul.nav.nav-pills.client-info
-          %li.first.active
-            %a{"data-toggle" => "pill", :href => "#drugs"} Produkty pre liečenie ortopedických ochorení
-          %li.second
+          %li.second.active
             %a{"data-toggle" => "pill", :href => "#wifi-taxi"} Nadštandardné služby
+          %li.first
+            %a{"data-toggle" => "pill", :href => "#drugs"} Produkty pre liečenie ortopedických ochorení
 
         %hr.blue
 
         .tab-content
 
-          #drugs.tab-pane.fade.in.active
+          #drugs.tab-pane.fade
             = haml :"modals/partials/drugs"
 
-          #wifi-taxi.tab-pane.fade
+          #wifi-taxi.tab-pane.fade.in.active
             .container
               .row
                 .col-md-6.col-md-offset-3

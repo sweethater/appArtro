@@ -15,7 +15,7 @@ $(window).load(function() {
 	$('*').css({
        'cursor' : 'url("../images/transparentCursor.cur"), auto'
     });
-	$("#loader").fadeOut("slow");
+	// $("#loader").fadeOut("slow");
 	hide_body_parts();
 	document.getElementById("bgvid").playbackRate = 1.5;
 	$('.mejs-controls').hide();
@@ -30,6 +30,13 @@ $(document).ready(function() {
 	document.addEventListener("contextmenu", function(e) {
 	    e.preventDefault();
 	});
+	if($('#pulsing_text').is(':visible')) {
+		setInterval(function(){$('#pulsing_text').toggleClass('active')}, 1100);
+	}
+
+	$('#loader').on('click',function(){
+		$("#loader").fadeOut("slow");
+	})
 
 	$('#show-pw-btn').on('click', function(){
 		show_pw();
@@ -82,6 +89,12 @@ $(document).ready(function() {
 
 	$('#userInfoModal .btn-close, #userInfoModal button.close').on('click',function(){
 		hide_pw();
+		infoModal = $('#userInfoModal');
+		infoModal.find('.nav-pills > li.active').removeClass('active');
+		infoModal.find('.tab-content > .active').removeClass('active').removeClass('in');
+
+		infoModal.find('.nav-pills > li:first').addClass('active');
+		infoModal.find('#wifi-taxi').addClass('active').addClass('in');
 	});
 
 
@@ -194,6 +207,7 @@ $(document).ready(function() {
         jsKeyboard.hide();
         hide_pw();
         $('.close').click();
+        $("#loader").fadeIn("slow");
         idleState = true;
 	      }, idleWait);
 	});

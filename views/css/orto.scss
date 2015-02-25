@@ -40,7 +40,33 @@
      top:600px;
      left:100px;
   }
-
+  .loader-glow {
+    z-index: 9005;
+     position: fixed;
+     top:600px;
+     left:100px;
+  }
+  .finger {
+    z-index: 9005;
+    position: fixed;
+    bottom:252px;
+    right:300px;
+  }
+  #pulsing_text {
+    font-family: rw-l;
+    font-size: 50px;
+    font-weight:100;
+    margin:0;
+    z-index: 9005;
+    position: fixed;
+    bottom:430px;
+    right:200px;
+    color:#e63e6f;
+    transition: all .9s ease-in-out;
+    &.active {
+      transform: scale(1.35);
+    }
+  }
 }
 
 #wrapper {
